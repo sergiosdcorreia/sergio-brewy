@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactLenis } from 'lenis/react'
+import CardsSection from './components/CardsSection'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -56,7 +57,7 @@ export default function Home() {
         scrollTrigger: scrollTriggerSettings,
       })
 
-      gsap.to('button', {
+      gsap.to('.button-animated', {
         y: 0,
         opacity: 1,
         delay: .25,
@@ -76,10 +77,10 @@ export default function Home() {
     for (let i = 1; i <=3; i++) {
       rows.push(
         <div className='row' key={i}>
-          <div className='card card-left'>
+          <div className='card-image card-left'>
             <img src={`/img-${2 * i - 1}.jpg`} alt='' />
           </div>
-          <div className='card card-right'>
+          <div className='card-image card-right'>
             <img src={`/img-${2 * i}.jpg`} alt='' />
           </div>
         </div>
@@ -90,12 +91,13 @@ export default function Home() {
   return (
     <>
     <ReactLenis root>
-      <section className='hero'>
+      <CardsSection />
+      <section className='hero section-footer-animation'>
         <div className='logo'>
           <p>Image</p>
         </div>
       </section>
-      <section className='main'>
+      <section className='main section-footer-animation'>
         <div className='main-content'>
           <div className='logo'>
             <p>This is a logo!</p>
@@ -112,12 +114,12 @@ export default function Home() {
             </div>
           </div>
           <div className='btn'>
-            <button>Let&apos;s talk!</button>
+            <button className='button-animated'>Let&apos;s talk!</button>
           </div>
         </div>
         {generateRows()}
       </section>
-      <section className='footer'>
+      <section className='footer section-footer-animation'>
         <p>Copyright 2024 - Sergio Correia</p>
       </section>
     </ReactLenis>
