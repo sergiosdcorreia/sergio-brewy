@@ -112,7 +112,7 @@ export default function Home() {
             </div>
           </div>
           <div className='btn'>
-            <button>Hire me!</button>
+            <button>Let&apos;s talk!</button>
           </div>
         </div>
         {generateRows()}
