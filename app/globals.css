@@ -109,6 +109,7 @@ section {
   width: 100vh;
   height: 150vh;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .row {

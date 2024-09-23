@@ -18,6 +18,29 @@ export default function Home() {
 
     const leftXValues = [-800, -900, -400]
     const rightXValues = [800, 900, 400]
+    const leftRotationValues = [-30, -20, -35]
+    const rightRotationValues = [30, 20, 35]
+    const yValues = [100, -150, -400]
+
+    gsap.utils.toArray('.row').forEach((row, index) => {
+      const cardLeft = row.querySelector('.card-left')
+      const cardRight = row.querySelector('.card-right')
+      
+      gsap.to(cardLeft, {
+        x: leftXValues[index],
+        scrollTrigger: {
+          trigger: '.main',
+          start: 'top center',
+          end: '150% bottom',
+          scrub: true,
+          onUpdate: (self) => {
+            const progress = self.progress
+            cardLeft.style.transform = `translateX(${progress * leftXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * leftRotationValues[index]}deg)`
+            cardRight.style.transform = `translateX(${progress * rightXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * rightRotationValues[index]}deg)`
+          }
+        }
+      })
+    })
   }, [])
 
   const generateRows = () => {
