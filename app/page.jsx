@@ -40,7 +40,35 @@ export default function Home() {
           }
         }
       })
+
+      gsap.to('.logo', {
+        scale: 1,
+        duration: .5,
+        ease: 'power1.out',
+        scrollTrigger: scrollTriggerSettings,
+      })
+
+      gsap.to('.line p', {
+        y: 0,
+        stagger: .1,
+        duration: .5,
+        ease: 'power1.out',
+        scrollTrigger: scrollTriggerSettings,
+      })
+
+      gsap.to('button', {
+        y: 0,
+        opacity: 1,
+        delay: .25,
+        duration: .5,
+        ease: 'power1.out',
+        scrollTrigger: scrollTriggerSettings,
+      })
     })
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
   }, [])
 
   const generateRows = () => {
