@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import Image from 'next/image'
 
-const Card = forwardRef(({ id, frontSrc, frontAlt, backText }, ref ) => {
+const Card = forwardRef(({ id, frontSrc, frontAlt, frontText, backText }, ref ) => {
   return (
     <div className='card' id={id} ref={ref}>
       <div className='card-wrapper'>
@@ -14,9 +14,10 @@ const Card = forwardRef(({ id, frontSrc, frontAlt, backText }, ref ) => {
               height={500}
               alt={frontAlt}
             />
+            <p className='card_title w-full font-bold text-white text-3xl'>{frontText}</p>
           </div>
-          <div className='flip-card-back'>
-            <p>{backText}</p>
+          <div className='flip-card-back bg-[url("/bg_image.jpg")] bg-cover'>
+            <p className='w-full px-4'>{backText}</p>
           </div>
         </div>
       </div>
