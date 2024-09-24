@@ -79,12 +79,20 @@ p, h1, h2, h3, h4, h5, h6 {
   @apply text-green-700;
 }
 
-.nav__icons__mobile li:hover {
+.nav__icons li:hover {
   @apply border-green-700 duration-300 ease-in-out;
+
+  @media (min-width: 1024px) {
+    @apply border-white;
+  }
 }
 
-.nav__icons__mobile li:hover a {
+.nav__icons li:hover a {
   @apply text-green-700 duration-300 ease-in-out;
+
+  @media (min-width: 1024px) {
+    @apply text-white;
+  }
 }
 
 /* Animation styles */
@@ -210,7 +218,6 @@ img {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: blue;
 }
 
 .container-cards section h1 {
