@@ -4,7 +4,9 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactLenis } from 'lenis/react'
+import Header from './components/Header'
 import CardsSection from './components/CardsSection'
+import ImageDistort from './components/ImageDistort'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -91,12 +93,9 @@ export default function Home() {
   return (
     <>
     <ReactLenis root>
+      <Header />
       <CardsSection />
-      <section className='hero section-footer-animation'>
-        <div className='logo'>
-          <p>Image</p>
-        </div>
-      </section>
+      <ImageDistort />
       <section className='main section-footer-animation'>
         <div className='main-content'>
           <div className='logo'>

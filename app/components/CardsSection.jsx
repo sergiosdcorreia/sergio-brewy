@@ -106,9 +106,6 @@ export default function CardsSection() {
             )
           })}
         </section>
-        <section className='footer-cards'>
-          <h1>Footer or Upcoming Section</h1>
-        </section>
       </div>
     </>
   );
