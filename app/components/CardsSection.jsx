@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function CardsSection() {
   const containerRef = useRef(null)
   const cardRefs = useRef([])
+  const textRef = useRef(null);
 
   useGSAP(() => {
     const cards = cardRefs.current
@@ -32,7 +33,7 @@ export default function CardsSection() {
       gsap.to(card, {
         left: `${positions[index]}%`,
         rotation: `${rotations[index]}`,
-        top: '50%',
+        top: '60%',
         ease: 'none',
         scrollTrigger: {
           trigger: containerRef.current,
@@ -44,6 +45,18 @@ export default function CardsSection() {
       })
     })
 
+    gsap.to(textRef.current, {
+      y: 0,
+      opacity: 1,
+      delay: .25,
+      duration: 0.5,
+      ease: 'power1.out',
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: '3000',
+        toggleActions: 'play reverse play reverse',
+      }
+    });
 
     cards.forEach((card, index) => {
       const frontEl = card.querySelector('.flip-card-front')
@@ -123,16 +136,17 @@ export default function CardsSection() {
           </div>
         </section>
         <section className='cards bg-[url("/hero_bg.jpg")] bg-cover'>
+          <h3 ref={textRef} className='cards_text text-white w-[70%] text-center absolute top-[26%] left-[50%] -translate-x-1/2 -translate-y-10 opacity-0'>Experience the vibrant taste of Organic Colombian Coffee, crafted to perfection with a smooth finish and rich aroma. Its balanced notes offer a satisfying blend of flavor and freshness, making every cup truly exceptional.</h3>
           {['Arabica Green', 'Arabica Roasted', 'Robusta Roasted', 'Mixed Sorts'].map((frontText, index) => {
             return (
               <Card
-                key={index}
-                id={`card-${index + 1}`}
-                frontSrc={`/coffee-${index + 1}.jpg`}
-                frontAlt='Card Image'
-                frontText={frontText}
-                backText='Enjoy the smooth, full-bodied flavor of Organic Colombian Coffee, perfectly balanced for a rich and satisfying experience.'
-                ref={(el) => (cardRefs.current[index] = el)}
+              key={index}
+              id={`card-${index + 1}`}
+              frontSrc={`/coffee-${index + 1}.jpg`}
+              frontAlt='Card Image'
+              frontText={frontText}
+              backText='Enjoy the smooth, full-bodied flavor of Organic Colombian Coffee, perfectly balanced for a rich and satisfying experience.'
+              ref={(el) => (cardRefs.current[index] = el)}
               />
             )
           })}
