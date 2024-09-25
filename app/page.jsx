@@ -116,7 +116,7 @@ export default function Home() {
               <p>Stay updated on the latest about us</p>
             </div>
             <div className='line'>
-              <p> with our newsletter.</p>
+              <p>and subscribe to our newsletter.</p>
             </div>
             <div className='line text-start'>
               <input type='email' placeholder='Email' className='p-3 outline-none' />
