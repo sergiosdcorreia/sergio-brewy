@@ -7,7 +7,7 @@ import gsap from 'gsap'
 export default function Hero() {
 
   useEffect(() => {
-    gsap.utils.toArray('.hero_title').forEach((title, index) => {
+    gsap.utils.toArray('.hero_title').forEach((title) => {
       gsap.to(title, {
         opacity: 1,
         delay: .25,
@@ -16,7 +16,7 @@ export default function Hero() {
       })
     })
 
-    gsap.utils.toArray('.hero_text').forEach((text, index) => {
+    gsap.utils.toArray('.hero_text').forEach((text) => {
       gsap.to(text, {
         opacity: 1,
         delay: 1.25,
@@ -28,6 +28,7 @@ export default function Hero() {
     gsap.to('.hero_image', {
       opacity: 1,
       scale: 1,
+      top: -300,
       delay: 2.5,
       duration: 2,
       ease: 'power1.out',
@@ -48,7 +49,7 @@ export default function Hero() {
     </div>
     <div className='relative h-[40vh] bg-green-800 bg-[url("/coffee_pattern.png")] bg-repeat bg-[length:400px_400px] z-20 shadow-2xl'>
       <div className='relative w-full h-0 pb-[30%]'>
-        <Image src='/coffee-bean.png' alt='coffee_bean' width={2049} height={1531} className='hero_image absolute -top-1/2 lg:-top-1/3 left-1/2 transform -translate-x-1/2 w-[60%] md:w-[70%] lg:w-[700px] object-contain opacity-0 scale-0' />
+        <Image src='/coffee-bean.png' alt='coffee_bean' width={2049} height={1531} className='hero_image absolute -top-1/2 lg:top-0 left-1/2 transform -translate-x-1/2 w-[60%] md:w-[70%] lg:w-[700px] object-contain opacity-0 scale-0' />
       </div>
     </div>
   </section>
