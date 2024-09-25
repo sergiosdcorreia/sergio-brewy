@@ -7,22 +7,18 @@ import gsap from 'gsap'
 export default function Hero() {
 
   useEffect(() => {
-    gsap.utils.toArray('.hero_title').forEach((title) => {
-      gsap.to(title, {
-        opacity: 1,
-        delay: .25,
-        duration: 1.5,
-        ease: 'power1.out',
-      })
+    gsap.to('.hero_title', {
+      opacity: 1,
+      delay: .25,
+      duration: 1.5,
+      ease: 'power1.out',
     })
 
-    gsap.utils.toArray('.hero_text').forEach((text) => {
-      gsap.to(text, {
-        opacity: 1,
-        delay: 1.25,
-        duration: 1.5,
-        ease: 'power1.out',
-      })
+    gsap.to('.hero_text', {
+      opacity: 1,
+      delay: 1.25,
+      duration: 1.5,
+      ease: 'power1.out',
     })
 
     gsap.to('.hero_image', {
