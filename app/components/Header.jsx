@@ -1,5 +1,8 @@
-import { useState } from 'react'
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from "next/image"
+import gsap from 'gsap'
 import { RiCloseLargeLine, RiFacebookFill, RiInstagramLine, RiMenu4Line, RiSearchLine, RiShoppingBagFill, RiTwitterXLine, RiUserFill, RiYoutubeFill } from "react-icons/ri"
 
 export default function Header() {
@@ -10,11 +13,20 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    gsap.to('#sticky-menu', {
+      top: 0,
+      duration: 1,
+      delay: 4,
+      ease: 'power1.out',
+    })
+  }, [])
+
   return (
     <>
       <header id="navbar" className='w-100 text-black lg:text-white'>
         <nav className="max-w-[1920px">
-          <div id="sticky-menu" className="fixed w-full top-0 left-0 z-50 bg-black/70 pb-10">
+          <div id="sticky-menu" className="fixed w-full top-[-250px] left-0 z-50 bg-black/70 pb-10">
             <div className="flex items-center justify-between h-24 px-5 md:px-10 lg:mx-auto lg:h-auto lg:flex-col">
               <div className="flex-1 lg:hidden"></div>
               <div className="flex-1 grid place-items-center lg:place-items-start lg:flex-initial lg:w-full lg:grid-cols-3">
