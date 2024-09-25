@@ -123,7 +123,7 @@ export default function Home() {
             </div>
           </div>
           <div className='btn pt-3'>
-            <button className='btn_primary button-animated text-white bg-green-800 px-14 py-4 rounded-full uppercase duration-300'><span className='relative z-10'>Subscribe</span></button>
+            <button className='btn_primary button-animated text-white bg-green-800 px-14 py-4 uppercase duration-300'><span className='relative z-10'>Subscribe</span></button>
           </div>
         </div>
         {generateRows()}

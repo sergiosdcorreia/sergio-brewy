@@ -53,8 +53,10 @@ export default function Footer() {
         <div className='flex flex-col text-green-700 gap-8 lg:flex-1'>
           <div className='text-2xl font-bold border-b-2 border-green-900 self-center lg:self-start'>Subscribe</div>
           <div className='flex text-start gap-3'>
-            <input type="email" placeholder='email' className='p-5 rounded-l-full outline-none' />
-            <button className='inline-block border border-green-900 text-white bg-green-800 px-14 py-4 rounded-full uppercase duration-300 -ml-14'>Subscribe</button>
+            <input type="email" placeholder='email' className='p-4 outline-none' />
+            <button type="submit" className='btn_primary inline-block border border-green-900 text-white bg-green-800 px-14 py-4 uppercase duration-300 -ml-4'>
+              <span className="relative z-10">Subscribe</span>
+            </button>
           </div>
         </div>
       </div>
