@@ -7,6 +7,7 @@ import { ReactLenis } from 'lenis/react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import CardsSection from './components/CardsSection'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -80,10 +81,10 @@ export default function Home() {
       rows.push(
         <div className='row' key={i}>
           <div className='card-image card-left'>
-            <img src={`/img-${2 * i - 1}.jpg`} alt='' />
+            <img src={`/product-${2 * i - 1}.jpg`} alt='' />
           </div>
           <div className='card-image card-right'>
-            <img src={`/img-${2 * i}.jpg`} alt='' />
+            <img src={`/product-${2 * i}.jpg`} alt='' />
           </div>
         </div>
       )
@@ -97,23 +98,23 @@ export default function Home() {
       <Hero />
       <CardsSection />
       <section className='main section-footer-animation'>
-        <div className='main-content'>
+        <div className='main-content z-50'>
           <div className='logo'>
-            <p>This is a logo!</p>
+            <Image src='/cup.png' alt='Cup of coffee' width={5000} height={5000} />
           </div>
-          <div className='copy'>
+          <div className='copy text-white'>
             <div className='line'>
-              <p>Let&apos;s build some projects together.</p>
+              <p>Stay updated with our newsletter</p>
             </div>
             <div className='line'>
-              <p>For a better web.</p>
+              <p>on the latest about our coffee.</p>
             </div>
             <div className='line'>
-              <p>Get in touch!</p>
+              <p>Sign it now!</p>
             </div>
           </div>
           <div className='btn'>
-            <button className='button-animated'>Let&apos;s talk!</button>
+            <button className='btn_primary button-animated'><span className='relative z-10'>Newsletter</span></button>
           </div>
         </div>
         {generateRows()}

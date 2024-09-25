@@ -48,7 +48,6 @@ export default function CardsSection() {
     gsap.to(textRef.current, {
       y: 0,
       opacity: 1,
-      delay: .25,
       duration: 0.5,
       ease: 'power1.out',
       scrollTrigger: {
