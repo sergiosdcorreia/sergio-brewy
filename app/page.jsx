@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactLenis } from 'lenis/react'
 import Header from './components/Header'
+import Hero from './components/Hero'
 import CardsSection from './components/CardsSection'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -14,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const scrollTriggerSettings = {
       trigger: '.main',
-      start: 'top 25%',
+      start: 'top top',
       toggleActions: 'play reverse play reverse',
     }
 
@@ -93,6 +94,7 @@ export default function Home() {
     <>
     <ReactLenis root>
       <Header />
+      <Hero />
       <CardsSection />
       <section className='main section-footer-animation'>
         <div className='main-content'>

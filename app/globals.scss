@@ -113,6 +113,16 @@ h4 {
   @apply text-base font-bold sm:text-lg;
 }
 
+/* About */
+
+.btn_primary, .btn_secondary {
+  @apply relative flex h-14 w-48 bg-green-800 items-center justify-center text-white uppercase shadow-2xl overflow-hidden transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-white before:duration-500 before:ease-out hover:text-black hover:before:h-60 hover:before:w-60;
+}
+
+.btn_secondary {
+  @apply bg-black;
+}
+
 /* Animation styles */
 img {
   width: 100%;
@@ -236,12 +246,11 @@ img {
   position: relative;
   width: 100vw;
   height: 100vh;
-  top: -60vh;
 }
 
 .card {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 240px;

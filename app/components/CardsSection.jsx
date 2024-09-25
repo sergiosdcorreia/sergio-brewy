@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import Card from './Card'
 import Image from 'next/image'
+import { RiFileList2Fill, RiPhoneFill } from 'react-icons/ri'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,17 +26,17 @@ export default function CardsSection() {
       end: () => `+=${totalScrollHeight}`,
       pin: true,
       pinSpacing: true,
-      markers: true,
     })
 
     cards.forEach((card, index) => {
       gsap.to(card, {
         left: `${positions[index]}%`,
         rotation: `${rotations[index]}`,
+        top: '50%',
         ease: 'none',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 400',
+          start: 'top top',
           end: () => `+=${window.innerHeight}`,
           scrub: .5,
           id: `spread-${index}`
@@ -58,7 +59,6 @@ export default function CardsSection() {
         end: () => `+=${totalScrollHeight}`,
         scrub: 1,
         id: `rotate-flip-${index}`,
-        markers: true,
         onUpdate: (self) => {
           const progress = self.progress
           if (progress >= startOffset && progress <= endOffset) {
@@ -90,19 +90,35 @@ export default function CardsSection() {
   return (
     <>
       <div ref={containerRef} className='container-cards'>
-        <section className='hero-cards h-[150vh]'>
-          <div className='bg-[url("/hero_bg.jpg")] bg-cover h-[70vh]'>
-            <div className='container mx-auto pt-40 pb-[40%] flex flex-col justify-center items-center gap-3 text-center md:pb-[30%]'>
-              <h1 className='text-green-700 mt-[10%]'>Organic</h1>
-
-              <h1>Colombian Coffee</h1>
-
-              <p className='text-white mt-5 md:w-[70%]'>Experience the rich essence of Colombia with a coffee crafted to perfection. Smooth and bold, each sip delivers a unique blend of flavor and aroma that awakens your senses.</p>
+        <section className='h-[100vh] bg-white bg-cover flex'>
+          <div className='flex flex-col justify-center h-100 p-20 lg:gap-20 lg:w-1/2'>
+            <div className='flex flex-col gap-2'>
+              <h2 className='text-green-700'>Caturra & Maragogipe</h2>
+              <h2>Boutique Plantation Coffee</h2>
+              <p className='mt-5'>The smooth richness of Organic Colombian Coffee is perfectly balanced, offering a deep, bold flavor with a hint of sweetness. Enjoy the harmonious blend that awakens your senses with every sip.</p>
+            </div>
+            <div className='flex flex-col gap-5'>
+              <div className='flex gap-5 items-center'>
+                <RiFileList2Fill className='text-2xl text-green-700' />
+                <a className='font-bold text-green-700' href="#">Download price</a>
+              </div>
+              <div className='flex gap-5 items-center'>
+                <RiPhoneFill className='text-2xl text-green-700' />
+                <a className='font-bold text-green-700' href="#">07472 849 396</a>
+              </div>
+            </div>
+            <div className='flex gap-20'>
+              <button className='btn_primary'><span className='relative z-10'>Read More</span></button>
+              <button className='btn_secondary'><span className='relative z-10'>Read More</span></button>
             </div>
           </div>
-          <div className='relative h-[35vh] bg-green-800 bg-[url("/coffee_pattern.png")] bg-repeat bg-[length:400px_400px] z-20'>
-            <div className='relative w-full h-0 pb-[50%]'>
-              <Image src='/coffee-bean.png' alt='coffee_bean' width={2049} height={1531} className='absolute -top-1/2 lg:-top-1/3 left-1/2 transform -translate-x-1/2 w-[60%] md:w-[70%] lg:w-[700px] object-contain' />
+          <div className='relative p-20 lg:w-1/2'>
+            <Image className='object-contain' src='/about_image.png' alt="about_image" width={1000} height={866} />
+            <div className='absolute top-[30%] left-[15%] lg:left-[10%] bg-white h-40 w-40 lg:h-44 lg:w-44 rounded-full grid place-content-center text-center border-2 border-green-900'>
+              <div>
+                <h3>since</h3>
+                <h2 className='text-green-700'>1955</h2>
+              </div>
             </div>
           </div>
         </section>
