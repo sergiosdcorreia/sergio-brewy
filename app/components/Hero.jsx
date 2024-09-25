@@ -9,7 +9,8 @@ export default function Hero() {
 
         <h1>Colombian Coffee</h1>
 
-        <p className='text-white mt-5 md:w-[70%]'>Experience the rich essence of Colombia with a coffee crafted to perfection. Smooth and bold, each sip delivers a unique blend of flavor and aroma that awakens your senses.</p>
+        <p className='text-white mt-5 md:w-[70%]'>Experience the rich essence of Colombia with a coffee crafted to perfection.</p>
+        <p className='text-white md:w-[70%]'>Smooth and bold, each sip delivers a unique blend of flavor and aroma that awakens your senses.</p>
       </div>
     </div>
     <div className='relative h-[40vh] bg-green-800 bg-[url("/coffee_pattern.png")] bg-repeat bg-[length:400px_400px] z-20 shadow-2xl'>

@@ -63,7 +63,7 @@ export default function Header() {
                     </li>
                   </ul>
               </div>
-              <div id="nav-menu" className={`absolute top-0 ${isMenuOpen ? 'right-[0]' : 'right-[-100%]'} min-h-[70vh] w-full px-5 md:px-10 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}>
+              <div id="nav-menu" className={`absolute top-0 ${isMenuOpen ? 'right-[0]' : 'right-[-100%]'} min-h-[70vh] w-full px-5 md:px-10 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto z-50`}>
                 <div className="flex items-center justify-between h-24 lg:hidden">
                   <Image className="w-[80px] h-[80px] mt-5" src="/logo_2.png" alt="logo_2" width={205} height={205} />
                   <button id="closeicon" className="text-3xl cursor-pointer" onClick={toggleMenu}>

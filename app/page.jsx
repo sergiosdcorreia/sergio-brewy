@@ -98,7 +98,7 @@ export default function Home() {
       <Hero />
       <CardsSection />
       <section className='main section-footer-animation'>
-        <div className='main-content z-50'>
+        <div className='main-content z-40'>
           <div className='logo'>
             <Image src='/cup.png' alt='Cup of coffee' width={5000} height={5000} />
           </div>
