@@ -4,10 +4,11 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactLenis } from 'lenis/react'
+import Image from 'next/image'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import CardsSection from './components/CardsSection'
-import Image from 'next/image'
+import Footer from './components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -110,18 +111,16 @@ export default function Home() {
               <p>on the latest about our coffee.</p>
             </div>
             <div className='line'>
-              <p>Sign it now!</p>
+              <input type='email' placeholder='Email' />
             </div>
           </div>
           <div className='btn'>
-            <button className='btn_primary button-animated'><span className='relative z-10'>Newsletter</span></button>
+            <button className='btn_primary button-animated'><span className='relative z-10'>Subscribe</span></button>
           </div>
         </div>
         {generateRows()}
       </section>
-      <section className='footer section-footer-animation'>
-        <p>Copyright 2024 - Sergio Correia</p>
-      </section>
+      <Footer />
     </ReactLenis>
     </>
   );
