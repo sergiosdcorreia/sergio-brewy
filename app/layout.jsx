@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='w-[100vw]'>
       <body
         className={`${poppins.className} antialiased max-w[1920px] mx-auto bg-black text-green-950`}
       >

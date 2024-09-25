@@ -159,7 +159,7 @@ img {
 
 .main {
   width: 100vh;
-  height: 150vh;
+  height: 100vh;
   flex-direction: column;
   margin: 0 auto;
 }
@@ -200,11 +200,6 @@ img {
 }
 
 .copy {
-  margin: 2em 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   line-height: 100%;
 }
 
@@ -212,7 +207,6 @@ img {
   position: relative;
   margin: .5em 0;
   width: max-content;
-  height: 28px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -220,6 +214,11 @@ img {
   position: relative;
   font-size: 24px;
   transform: translateY(30px);
+}
+
+.line input {
+  position: relative;
+  transform: translateY(60px);
 }
 
 .button-animated {

@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const scrollTriggerSettings = {
       trigger: '.main',
-      start: 'top top',
+      start: 'top 10%',
       toggleActions: 'play reverse play reverse',
     }
 
@@ -36,7 +36,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: '.main',
           start: 'top center',
-          end: '150% bottom',
+          end: '120% bottom',
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress
@@ -54,6 +54,14 @@ export default function Home() {
       })
 
       gsap.to('.line p', {
+        y: 0,
+        stagger: .1,
+        duration: .5,
+        ease: 'power1.out',
+        scrollTrigger: scrollTriggerSettings,
+      })
+
+      gsap.to('.line input', {
         y: 0,
         stagger: .1,
         duration: .5,
@@ -103,19 +111,19 @@ export default function Home() {
           <div className='logo'>
             <Image src='/cup.png' alt='Cup of coffee' width={5000} height={5000} />
           </div>
-          <div className='copy text-white'>
+          <div className='copy flex flex-col justify-center items-center text-white gap-5 pt-10'>
             <div className='line'>
-              <p>Stay updated with our newsletter</p>
+              <p>Stay updated on the latest about us</p>
             </div>
             <div className='line'>
-              <p>on the latest about our coffee.</p>
+              <p> with our newsletter.</p>
             </div>
-            <div className='line'>
-              <input type='email' placeholder='Email' />
+            <div className='line text-start'>
+              <input type='email' placeholder='Email' className='p-3 outline-none' />
             </div>
           </div>
-          <div className='btn'>
-            <button className='btn_primary button-animated'><span className='relative z-10'>Subscribe</span></button>
+          <div className='btn pt-3'>
+            <button className='btn_primary button-animated text-white bg-green-800 px-14 py-4 rounded-full uppercase duration-300'><span className='relative z-10'>Subscribe</span></button>
           </div>
         </div>
         {generateRows()}
