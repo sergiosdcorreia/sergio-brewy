@@ -103,7 +103,7 @@ export default function CardsSection() {
     <>
       <div ref={containerRef} className='container-cards'>
         <section id='about' className='min-h-[100vh] bg-white bg-cover lg:flex'>
-          <div className='flex flex-col justify-center h-100 p-20 lg:gap-20 lg:w-1/2'>
+          <div className='flex flex-col justify-center h-100 p-10 lg:gap-20 xl:p-28 lg:w-1/2'>
             <div className='flex flex-col gap-2'>
               <h2 className='text-green-700'>Caturra & Maragogipe</h2>
               <h2>Boutique Plantation Coffee</h2>
@@ -124,7 +124,7 @@ export default function CardsSection() {
               <button className='btn_secondary'><span className='relative z-10'>Read More</span></button>
             </div>
           </div>
-          <div className='relative p-20 lg:w-1/2'>
+          <div className='relative p-10 lg:gap-20 xl:p-28 lg:w-1/2'>
             <Image className='object-contain' src='/about_image.png' alt="about_image" width={1000} height={866} />
             <div className='absolute top-[30%] left-[15%] lg:left-[10%] bg-white h-40 w-40 lg:h-44 lg:w-44 rounded-full grid place-content-center text-center border-2 border-green-900'>
               <div>

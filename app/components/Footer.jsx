@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col text-green-700 gap-8 lg:flex-1 xl:opacity-0'>
+        <div className='flex flex-col text-green-700 gap-8 lg:flex-1 xl:hidden'>
           <div className='text-2xl font-bold border-b-2 border-green-900 self-center lg:self-start'>Subscribe</div>
           <div className='flex flex-col items-center md:flex-row text-start gap-3'>
             <input type="email" placeholder='email' className='p-4 outline-none' />
