@@ -22,7 +22,7 @@ export default function Header() {
       ease: 'power1.out',
     })
 
-    const pageSectionsLinks = ['home', 'about', 'fragrance']
+    const pageSectionsLinks = ['home', 'about', 'fragrance', 'products']
     let sectionElements = []
 
     pageSectionsLinks.map((id) => {
@@ -124,7 +124,7 @@ export default function Header() {
                     <ScrollLink id="quality">Quality</ScrollLink>
                   </li>
                   <li onClick={toggleMenu}>
-                    <ScrollLink id="products">Products</ScrollLink>
+                    <ScrollLink id="products" active={activeSection === 'products' ? true : false }>Products</ScrollLink>
                   </li>
                 </ul>
                 <div className="flex items-center py-10 lg:hidden">

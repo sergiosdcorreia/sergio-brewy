@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import CardsSection from './components/CardsSection'
+import Products from './components/Products'
 import Footer from './components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -106,6 +107,7 @@ export default function Home() {
       <Header />
       <Hero />
       <CardsSection />
+      <Products />
       <section className='main section-footer-animation'>
         <div className='main-content z-40'>
           <div className='logo'>
