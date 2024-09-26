@@ -22,7 +22,7 @@ export default function Header() {
       ease: 'power1.out',
     })
 
-    const pageSectionsLinks = ['home', 'about', 'fragrance', 'products']
+    const pageSectionsLinks = ['home', 'about', 'fragrance', 'quality', 'products']
     let sectionElements = []
 
     pageSectionsLinks.map((id) => {
@@ -121,7 +121,7 @@ export default function Header() {
                     <ScrollLink id="fragrance" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
                   </li>
                   <li onClick={toggleMenu}>
-                    <ScrollLink id="quality">Quality</ScrollLink>
+                    <ScrollLink id="quality" active={activeSection === 'quality' ? true : false }>Quality</ScrollLink>
                   </li>
                   <li onClick={toggleMenu}>
                     <ScrollLink id="products" active={activeSection === 'products' ? true : false }>Products</ScrollLink>

@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import CardsSection from './components/CardsSection'
+import Quality from './components/Quality'
 import Products from './components/Products'
 import Footer from './components/Footer'
 
@@ -107,8 +108,9 @@ export default function Home() {
       <Header />
       <Hero />
       <CardsSection />
+      <Quality />
       <Products />
-      <section className='main section-footer-animation'>
+      <section className='main section-footer-animation pt-[200px] lg:pt-[300px]'>
         <div className='main-content z-40'>
           <div className='logo'>
             <Image src='/cup.png' alt='Cup of coffee' width={5000} height={5000} />
