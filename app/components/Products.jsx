@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import gsap from 'gsap'
 import { RiCheckLine, RiStarFill } from 'react-icons/ri';
 
 export default function Products() {
