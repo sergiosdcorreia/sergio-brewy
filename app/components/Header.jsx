@@ -8,8 +8,8 @@ import ScrollLink from './ScrollLink';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Toggle menu function
+  const [activeSection, setActiveSection] = useState('home')
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -18,9 +18,36 @@ export default function Header() {
     gsap.to('#sticky-menu', {
       top: 0,
       duration: 1,
-      delay: 4,
+      delay: 1.5,
       ease: 'power1.out',
     })
+
+    const pageSectionsLinks = ['home', 'about', 'fragrance']
+    let sectionElements = []
+
+    pageSectionsLinks.map((id) => {
+      const section = document.getElementById(id)
+      sectionElements.push(section)
+    })
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    });
+
+    sectionElements.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sectionElements.forEach((section) => {
+        observer.unobserve(section);
+      });
+    }
+
   }, [])
 
   return (
@@ -85,13 +112,13 @@ export default function Header() {
                 </div>
                 <ul className="flex flex-col items-start gap-5 lg:flex-row lg:mt-8">
                   <li onClick={toggleMenu}>
-                    <ScrollLink id="home" active>Home</ScrollLink>
+                    <ScrollLink id="home" active={activeSection === 'home' ? true : false }>Home</ScrollLink>
                   </li>
                   <li onClick={toggleMenu}>
-                    <ScrollLink id="about">About</ScrollLink>
+                    <ScrollLink id="about" active={activeSection === 'about' ? true : false }>About</ScrollLink>
                   </li>
                   <li onClick={toggleMenu}>
-                    <ScrollLink id="fragrance">Fragrance</ScrollLink>
+                    <ScrollLink id="fragrance" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
                   </li>
                   <li onClick={toggleMenu}>
                     <ScrollLink id="quality">Quality</ScrollLink>

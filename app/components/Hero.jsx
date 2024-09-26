@@ -9,14 +9,14 @@ export default function Hero() {
   useEffect(() => {
     gsap.to('.hero_title', {
       opacity: 1,
-      delay: .25,
+      delay: .10,
       duration: 1.5,
       ease: 'power1.out',
     })
 
     gsap.to('.hero_text', {
       opacity: 1,
-      delay: 1.25,
+      delay: 1,
       duration: 1.5,
       ease: 'power1.out',
     })
@@ -25,7 +25,7 @@ export default function Hero() {
       opacity: 1,
       scale: 1,
       top: -300,
-      delay: 2.5,
+      delay: 1.2,
       duration: 2,
       ease: 'power1.out',
     })
