@@ -102,7 +102,7 @@ export default function CardsSection() {
   return (
     <>
       <div ref={containerRef} className='container-cards'>
-        <section className='h-[100vh] bg-white bg-cover flex'>
+        <section id='about' className='h-[100vh] bg-white bg-cover flex'>
           <div className='flex flex-col justify-center h-100 p-20 lg:gap-20 lg:w-1/2'>
             <div className='flex flex-col gap-2'>
               <h2 className='text-green-700'>Caturra & Maragogipe</h2>
@@ -134,7 +134,7 @@ export default function CardsSection() {
             </div>
           </div>
         </section>
-        <section className='cards bg-[url("/hero_bg.jpg")] bg-cover'>
+        <section id='fragrance' className='cards bg-[url("/hero_bg.jpg")] bg-cover'>
           <h3 ref={textRef} className='cards_text text-white w-[70%] text-center absolute top-[26%] left-[50%] -translate-x-1/2 -translate-y-10 opacity-0'>Experience the vibrant taste of Organic Colombian Coffee, crafted to perfection with a smooth finish and rich aroma. Its balanced notes offer a satisfying blend of flavor and freshness, making every cup truly exceptional.</h3>
           {['Arabica Green', 'Arabica Roasted', 'Robusta Roasted', 'Mixed Sorts'].map((frontText, index) => {
             return (

@@ -32,7 +32,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className='hero-cards h-[120vh]'>
+    <section id='home' className='hero-cards h-[120vh]'>
     <div className='bg-[url("/hero_bg.jpg")] bg-cover h-[80vh]'>
       <div className='container mx-auto pt-40 pb-[40%] flex flex-col justify-center items-center gap-3 text-center md:pb-[30%]'>
         <h1 className='hero_title text-green-700 mt-[10%] opacity-0'>Organic</h1>

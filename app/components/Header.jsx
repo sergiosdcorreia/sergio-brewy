@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from "next/image"
 import gsap from 'gsap'
 import { RiCloseLargeLine, RiFacebookFill, RiInstagramLine, RiMenu4Line, RiSearchLine, RiShoppingBagFill, RiTwitterXLine, RiUserFill, RiYoutubeFill } from "react-icons/ri"
+import ScrollLink from './ScrollLink';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,20 +84,20 @@ export default function Header() {
                   </button>
                 </div>
                 <ul className="flex flex-col items-start gap-5 lg:flex-row lg:mt-8">
-                  <li>
-                    <a href="#home" className="nav-link active" onClick={toggleMenu}>Home</a>
+                  <li onClick={toggleMenu}>
+                    <ScrollLink id="home" active>Home</ScrollLink>
                   </li>
-                  <li>
-                    <a href="#about" className="nav-link" onClick={toggleMenu}>About</a>
+                  <li onClick={toggleMenu}>
+                    <ScrollLink id="about">About</ScrollLink>
                   </li>
-                  <li>
-                    <a href="#fragrance" className="nav-link" onClick={toggleMenu}>Fragrance</a>
+                  <li onClick={toggleMenu}>
+                    <ScrollLink id="fragrance">Fragrance</ScrollLink>
                   </li>
-                  <li>
-                    <a href="#quality" className="nav-link" onClick={toggleMenu}>Quality</a>
+                  <li onClick={toggleMenu}>
+                    <ScrollLink id="quality">Quality</ScrollLink>
                   </li>
-                  <li>
-                    <a href="#products" className="nav-link" onClick={toggleMenu}>Products</a>
+                  <li onClick={toggleMenu}>
+                    <ScrollLink id="products">Products</ScrollLink>
                   </li>
                 </ul>
                 <div className="flex items-center py-10 lg:hidden">
