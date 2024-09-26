@@ -7,6 +7,8 @@ import gsap from 'gsap'
 export default function Hero() {
 
   useEffect(() => {
+    const mediaQuery = gsap.matchMedia();
+
     gsap.to('.hero_title', {
       opacity: 1,
       delay: .10,
@@ -21,14 +23,28 @@ export default function Hero() {
       ease: 'power1.out',
     })
 
-    gsap.to('.hero_image', {
-      opacity: 1,
-      scale: 1,
-      top: -300,
-      delay: 1.2,
-      duration: 2,
-      ease: 'power1.out',
+    mediaQuery.add('(max-width: 1319px)', () => {
+      gsap.to('.hero_image', {
+        opacity: 1,
+        scale: 1,
+        top: -60,
+        delay: 1.2,
+        duration: 2,
+        ease: 'power1.out',
+      })
     })
+
+    mediaQuery.add('(min-width: 1320px)', () => {
+      gsap.to('.hero_image', {
+        opacity: 1,
+        scale: 1,
+        top: -300,
+        delay: 1.2,
+        duration: 2,
+        ease: 'power1.out',
+      })
+    })
+
   }, [])
 
   return (
@@ -45,7 +61,7 @@ export default function Hero() {
     </div>
     <div className='relative h-[40vh] bg-green-800 bg-[url("/coffee_pattern.png")] bg-repeat bg-[length:400px_400px] z-20 shadow-2xl'>
       <div className='relative w-full h-0 pb-[30%]'>
-        <Image src='/coffee-bean.png' alt='coffee_bean' width={2049} height={1531} className='hero_image absolute -top-1/2 lg:top-0 left-1/2 transform -translate-x-1/2 w-[60%] md:w-[70%] lg:w-[700px] object-contain opacity-0 scale-0' />
+        <Image src='/coffee-bean.png' alt='coffee_bean' width={2049} height={1531} className='hero_image absolute -top-1/4 lg:top-0 left-1/2 transform -translate-x-1/2 max-w-[250px] md:max-w-[575px] lg:max-w-[700px] object-contain opacity-0 scale-0' />
       </div>
     </div>
   </section>

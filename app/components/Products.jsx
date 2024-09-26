@@ -6,7 +6,7 @@ import { RiCheckLine, RiStarFill } from 'react-icons/ri';
 export default function Products() {
 
   return (
-    <section id='products' className='p-20 min-h-[100vh] bg-white flex flex-col justify-center pt-[200px] lg:pt-[300px]'>
+    <section id='products' className='p-10 md:p-20 lg:p-28 min-h-[100vh] bg-white flex flex-col justify-center pt-[200px] lg:pt-[300px]'>
       <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
         <h4 className='text-green-700'>Online Store</h4>
         <h2>Popular Products</h2>
@@ -60,7 +60,7 @@ export default function Products() {
           </div>
         </div>
       </div>
-      <div className='p-20 md:py-28'>
+      <div className='md:py-28'>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4'>
           <div className='flex flex-col items-center gap-3'>
             <Image src='/product_02.png' alt='product_image' width={321} height={507} className='max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />

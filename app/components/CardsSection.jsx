@@ -102,7 +102,7 @@ export default function CardsSection() {
   return (
     <>
       <div ref={containerRef} className='container-cards'>
-        <section id='about' className='min-h-[100vh] bg-white bg-cover flex'>
+        <section id='about' className='min-h-[100vh] bg-white bg-cover lg:flex'>
           <div className='flex flex-col justify-center h-100 p-20 lg:gap-20 lg:w-1/2'>
             <div className='flex flex-col gap-2'>
               <h2 className='text-green-700'>Caturra & Maragogipe</h2>

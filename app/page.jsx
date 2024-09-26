@@ -17,6 +17,8 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
 
   useEffect(() => {
+    const mediaQueries = gsap.matchMedia();
+
     const scrollTriggerSettings = {
       trigger: '.main',
       start: 'top 10%',
@@ -29,57 +31,60 @@ export default function Home() {
     const rightRotationValues = [30, 20, 35]
     const yValues = [100, -150, -400]
 
-    gsap.utils.toArray('.row').forEach((row, index) => {
-      const cardLeft = row.querySelector('.card-left')
-      const cardRight = row.querySelector('.card-right')
-      
-      gsap.to(cardLeft, {
-        x: leftXValues[index],
-        scrollTrigger: {
-          trigger: '.main',
-          start: 'top center',
-          end: '120% bottom',
-          scrub: true,
-          onUpdate: (self) => {
-            const progress = self.progress
-            cardLeft.style.transform = `translateX(${progress * leftXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * leftRotationValues[index]}deg)`
-            cardRight.style.transform = `translateX(${progress * rightXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * rightRotationValues[index]}deg)`
+    mediaQueries.add('(min-width: 1280px)', () => {
+      gsap.utils.toArray('.row').forEach((row, index) => {
+        const cardLeft = row.querySelector('.card-left')
+        const cardRight = row.querySelector('.card-right')
+        
+        gsap.to(cardLeft, {
+          x: leftXValues[index],
+          scrollTrigger: {
+            trigger: '.main',
+            start: 'top center',
+            end: '120% bottom',
+            scrub: true,
+            onUpdate: (self) => {
+              const progress = self.progress
+              cardLeft.style.transform = `translateX(${progress * leftXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * leftRotationValues[index]}deg)`
+              cardRight.style.transform = `translateX(${progress * rightXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * rightRotationValues[index]}deg)`
+            }
           }
-        }
-      })
-
-      gsap.to('.logo', {
-        scale: 1,
-        duration: .5,
-        ease: 'power1.out',
-        scrollTrigger: scrollTriggerSettings,
-      })
-
-      gsap.to('.line p', {
-        y: 0,
-        stagger: .1,
-        duration: .5,
-        ease: 'power1.out',
-        scrollTrigger: scrollTriggerSettings,
-      })
-
-      gsap.to('.line input', {
-        y: 0,
-        stagger: .1,
-        duration: .5,
-        ease: 'power1.out',
-        scrollTrigger: scrollTriggerSettings,
-      })
-
-      gsap.to('.button-animated', {
-        y: 0,
-        opacity: 1,
-        delay: .25,
-        duration: .5,
-        ease: 'power1.out',
-        scrollTrigger: scrollTriggerSettings,
+        })
+  
+        gsap.to('.logo', {
+          scale: 1,
+          duration: .5,
+          ease: 'power1.out',
+          scrollTrigger: scrollTriggerSettings,
+        })
+  
+        gsap.to('.line p', {
+          y: 0,
+          stagger: .1,
+          duration: .5,
+          ease: 'power1.out',
+          scrollTrigger: scrollTriggerSettings,
+        })
+  
+        gsap.to('.line input', {
+          y: 0,
+          stagger: .1,
+          duration: .5,
+          ease: 'power1.out',
+          scrollTrigger: scrollTriggerSettings,
+        })
+  
+        gsap.to('.button-animated', {
+          y: 0,
+          opacity: 1,
+          delay: .25,
+          duration: .5,
+          ease: 'power1.out',
+          scrollTrigger: scrollTriggerSettings,
+        })
       })
     })
+
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
@@ -110,7 +115,7 @@ export default function Home() {
       <CardsSection />
       <Quality />
       <Products />
-      <section className='main section-footer-animation pt-[200px] lg:pt-[300px]'>
+      <section className='main section-footer-animation pt-[300px] hidden'>
         <div className='main-content z-40'>
           <div className='logo'>
             <Image src='/cup.png' alt='Cup of coffee' width={5000} height={5000} />

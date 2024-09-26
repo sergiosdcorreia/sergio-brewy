@@ -130,14 +130,6 @@ img {
   object-fit: cover;
 }
 
-.section-footer-animation {
-  position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hero {
   min-height: 100vh;
 }
@@ -304,10 +296,20 @@ img {
   transform: rotateY(180deg);
 }
 
-@media(max-width: 960px) {
+@media (max-width: 960px) {
   .card-image {
     width: 50%;
     height: 240px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-footer-animation {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
