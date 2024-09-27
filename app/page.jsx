@@ -7,6 +7,7 @@ import { ReactLenis } from 'lenis/react'
 import Image from 'next/image'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import About from './components/About'
 import CardsSection from './components/CardsSection'
 import Quality from './components/Quality'
 import Products from './components/Products'
@@ -50,14 +51,14 @@ export default function Home() {
             }
           }
         })
-  
+
         gsap.to('.logo', {
           scale: 1,
           duration: .5,
           ease: 'power1.out',
           scrollTrigger: scrollTriggerSettings,
         })
-  
+
         gsap.to('.line p', {
           y: 0,
           stagger: .1,
@@ -65,7 +66,7 @@ export default function Home() {
           ease: 'power1.out',
           scrollTrigger: scrollTriggerSettings,
         })
-  
+
         gsap.to('.line input', {
           y: 0,
           stagger: .1,
@@ -73,7 +74,7 @@ export default function Home() {
           ease: 'power1.out',
           scrollTrigger: scrollTriggerSettings,
         })
-  
+
         gsap.to('.button-animated', {
           y: 0,
           opacity: 1,
@@ -112,6 +113,7 @@ export default function Home() {
     <ReactLenis root>
       <Header />
       <Hero />
+      <About />
       <CardsSection />
       <Quality />
       <Products />

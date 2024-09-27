@@ -213,7 +213,7 @@ img {
 /* Flip cards animation */
 .container-cards {
   width: 100%;
-  height: 500vh;
+  height: 400vh;
 }
 
 .container-cards .cards {
@@ -224,7 +224,7 @@ img {
 
 .card {
   position: absolute;
-  top: 15%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 240px;
@@ -294,6 +294,47 @@ img {
   padding: 1em;
   background-color: #fff;
   transform: rotateY(180deg);
+}
+
+/* Quality section animations */
+.quality-left {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+}
+
+.quality-left-1 {
+  left: -130%;
+}
+
+.quality-left-2 {
+  left: -200%;
+}
+
+.quality-left-3 {
+  left: -280%;
+}
+
+.quality-right {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+}
+
+.quality-right-1 {
+  left: 130%;
+}
+
+.quality-right-2 {
+  left: 200%;
+}
+
+.quality-right-3 {
+  left: 280%;
+}
+
+.quality-coffee-cup {
+  rotate: 180deg;
 }
 
 @media (max-width: 960px) {
