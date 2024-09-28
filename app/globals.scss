@@ -304,15 +304,15 @@ img {
 }
 
 .quality-left-1 {
-  left: -130%;
+  left: -150%;
 }
 
 .quality-left-2 {
-  left: -200%;
+  left: -220%;
 }
 
 .quality-left-3 {
-  left: -280%;
+  left: -300%;
 }
 
 .quality-right {
@@ -322,19 +322,43 @@ img {
 }
 
 .quality-right-1 {
-  left: 130%;
+  left: 150%;
 }
 
 .quality-right-2 {
-  left: 200%;
+  left: 220%;
 }
 
 .quality-right-3 {
-  left: 280%;
+  left: 300%;
 }
 
 .quality-coffee-cup {
   rotate: 180deg;
+}
+
+/* Products animations */
+.product_animation-container {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.product_subtitle {
+  position: relative;
+  transform: translateY(30px);
+  line-height: 100%;
+}
+
+.product_title {
+  position: relative;
+  transform: translateY(50px);
+  line-height: 100%;
+}
+
+.product_text-animated {
+  position: relative;
+  transform: translateY(90px);
+  line-height: 100%;
 }
 
 @media (max-width: 960px) {

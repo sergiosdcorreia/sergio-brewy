@@ -28,7 +28,7 @@ export default function Quality() {
         gsap.to(quality, {
           scrollTrigger: {
             trigger: qualityContainer,
-            start: 'top 600',
+            start: 'top 500',
             end: 'bottom bottom',
             scrub: .1,
           },
@@ -41,7 +41,7 @@ export default function Quality() {
         gsap.to(quality, {
           scrollTrigger: {
             trigger: qualityContainer,
-            start: 'top 600',
+            start: 'top 500',
             end: 'bottom bottom',
             scrub: .1,
           },
