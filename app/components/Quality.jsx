@@ -24,7 +24,7 @@ export default function Quality() {
 
     mediaQueries.add('(min-width: 1024px)', () => {
       
-      qualityLeft.forEach((quality, index) => {
+      qualityLeft.forEach((quality) => {
         gsap.to(quality, {
           scrollTrigger: {
             trigger: qualityContainer,
@@ -37,7 +37,7 @@ export default function Quality() {
         })
       })
 
-      qualityRight.forEach((quality, index) => {
+      qualityRight.forEach((quality) => {
         gsap.to(quality, {
           scrollTrigger: {
             trigger: qualityContainer,
