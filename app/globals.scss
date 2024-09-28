@@ -343,22 +343,8 @@ img {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.product_subtitle {
-  position: relative;
-  transform: translateY(30px);
-  line-height: 100%;
-}
-
-.product_title {
-  position: relative;
-  transform: translateY(50px);
-  line-height: 100%;
-}
-
-.product_text-animated {
-  position: relative;
-  transform: translateY(90px);
-  line-height: 100%;
+.stars-3 {
+  transform: translateY(100%);
 }
 
 @media (max-width: 960px) {

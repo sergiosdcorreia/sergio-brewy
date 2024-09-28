@@ -218,21 +218,227 @@ export default function Products() {
       ease: 'power1.out',
     })
 
+    gsap.to('.stars-1', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: .2,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_1-text', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: .4,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_1-price', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: .6,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_1-button', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      opacity: 1,
+      delay: .8,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.stars-2', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 1,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_2-text', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 1.2,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_2-price', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 1.4,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_2-button', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      opacity: 1,
+      delay: 1.6,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.stars-3', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 1.8,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_3-text', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 2,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_3-price', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 2.2,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_3-button', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      opacity: 1,
+      delay: 2.4,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.stars-4', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 2.6,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_4-text', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 2.8,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_4-price', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      y: 0,
+      delay: 3,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
+    gsap.to('.product_4-button', {
+      scrollTrigger: {
+        trigger: '.prod-container',
+        start: 'top -30%',
+        toggleActions: 'play reverse play reverse',
+        markers: true,
+      },
+      opacity: 1,
+      delay: 3.2,
+      duration: .5,
+      ease: 'power1.out',
+    })
+
   }, [])
 
   return (
     <section id='products' className='prod-container p-10 md:p-20 lg:p-28 min-h-[100vh] bg-white flex flex-col justify-center pt-[200px] lg:pt-[300px]'>
       <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
         <div className='product_animation-container'>
-          <h4 className='product_subtitle text-green-700'>Online Store</h4>
+          <h4 className='product_subtitle relative translate-y-[100%] text-green-700'>Online Store</h4>
         </div>
         <div className='product_animation-container'>
-          <h2 className='product_title'>Popular Products</h2>
+          <h2 className='product_title relative translate-y-[100%]'>Popular Products</h2>
         </div>
-        <div className='py-5'>
-          <div className='product_animation-container'>
-            <p className='product_intro_text product_text-animated'>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and satisfying experience. Aliquam eget sapien sed orci accumsan interdum at ac mi.</p>
-          </div>
+        <div className='product_animation-container'>
+          <p className='py-5 product_intro_text relative translate-y-[100%]'>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and satisfying experience. Aliquam eget sapien sed orci accumsan interdum at ac mi.</p>
         </div>
       </div>
       <div className='flex flex-col items-center justify-center gap-10 lg:flex-row lg:justify-start lg:items-start lg:gap-20 lg:mt-10'>
@@ -303,76 +509,100 @@ export default function Products() {
       <div className='md:py-28'>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4'>
           <div className='flex flex-col items-center gap-3'>
-            <div className='product_image-1 opacity-0'>
-              <Image src='/product_02.png' alt='product_image' width={321} height={507} className='max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
-            </div>
-            <div className='text-yellow-500'>
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
+            <Image src='/product_02.png' alt='product_image' width={321} height={507} className='product_image-1 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <div className='product_animation-container'>
+              <div className='stars-1 text-yellow-500 relative translate-y-[100%]'>
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+              </div>
             </div>
 
-            <div className='text-center'>
-              <h4>Peru Whole Bean</h4>
-              <h4 className='text-green-700'>£39.99</h4>
+            <div className='product_animation-container text-center'>
+              <div className='product_1-text relative translate-y-[100%]'>
+                <h4>Peru Whole Bean</h4>
+              </div>
             </div>
-            <button className='btn_primary'><span className='relative z-10'>Add to cart</span></button>
+            <div className='product_animation-container text-center'>
+              <div className='product_1-price relative translate-y-[100%]'>
+                <h4 className='text-green-700'>£39.99</h4>
+              </div>
+            </div>
+            <button className='product_1-button opacity-0 btn_primary'><span className='relative z-10'>Add to cart</span></button>
           </div>
           <div className='flex flex-col items-center gap-3'>
-            <div className='product_image-2 opacity-0'>
-              <Image src='/product_03.png' alt='product_image' width={321} height={507} className='max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
-            </div>
-            <div className='text-yellow-500'>
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
+            <Image src='/product_03.png' alt='product_image' width={321} height={507} className='product_image-2 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <div className='product_animation-container'>
+              <div className='stars-2 text-yellow-500 relative translate-y-[100%]'>
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+              </div>
             </div>
 
-            <div className='text-center'>
+            <div className='product_animation-container text-center'>
+              <div className='product_2-text relative translate-y-[100%]'>
               <h4>Ethiopia Whole Bean</h4>
-              <h4 className='text-green-700'>£39.99</h4>
+              </div>
             </div>
-            <button className='btn_primary'><span className='relative z-10'>Add to cart</span></button>
+            <div className='product_animation-container text-center'>
+              <div className='product_2-price relative translate-y-[100%]'>
+                <h4 className='text-green-700'>£39.99</h4>
+              </div>
+            </div>
+            <button className='btn_primary product_2-button opacity-0'><span className='relative z-10'>Add to cart</span></button>
           </div>
           <div className='flex flex-col items-center gap-3'>
-            <div className='product_image-3 opacity-0'>
-              <Image src='/product_04.png' alt='product_image' width={321} height={507} className='max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
-            </div>
-            <div className='text-yellow-500'>
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
+            <Image src='/product_04.png' alt='product_image' width={321} height={507} className='product_image-3 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <div className='product_animation-container'>
+              <div className='stars-3 text-yellow-500 relative translate-y-[100%]'>
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+              </div>
             </div>
 
-            <div className='text-center'>
-              <h4>Columbia Whole Bean</h4>
-              <h4 className='text-green-700'>£39.99</h4>
+            <div className='product_animation-container text-center'>
+              <div className='product_3-text relative translate-y-[100%]'>
+                <h4>Columbia Whole Bean</h4>
+              </div>
             </div>
-            <button className='btn_primary'><span className='relative z-10'>Add to cart</span></button>
+            <div className='product_animation-container text-center'>
+              <div className='product_3-price relative translate-y-[100%]'>
+                <h4 className='text-green-700'>£39.99</h4>
+              </div>
+            </div>
+            <button className='btn_primary product_3-button opacity-0'><span className='relative z-10'>Add to cart</span></button>
           </div>
           <div className='flex flex-col items-center gap-3'>
-            <div className='product_image-4 opacity-0'>
-              <Image src='/product_05.png' alt='product_image' width={321} height={507} className='max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
-            </div>
-            <div className='text-yellow-500'>
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
-              <RiStarFill className='inline-block' />
+            <Image src='/product_05.png' alt='product_image' width={321} height={507} className='product_image-4 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <div className='product_animation-container'>
+              <div className='stars-4 text-yellow-500 relative translate-y-[100%]'>
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+                <RiStarFill className='inline-block' />
+              </div>
             </div>
 
-            <div className='text-center'>
-              <h4>Nicaragua Whole Bean</h4>
-              <h4 className='text-green-700'>£39.99</h4>
+            <div className='product_animation-container text-center'>
+              <div className='product_4-text relative translate-y-[100%]'>
+                <h4>Nicaragua Whole Bean</h4>
+              </div>
             </div>
-            <button className='btn_primary'><span className='relative z-10'>Add to cart</span></button>
+            <div className='product_animation-container text-center'>
+              <div className='product_4-price relative translate-y-[100%]'>
+                <h4 className='text-green-700'>£39.99</h4>
+              </div>
+            </div>
+            <button className='btn_primary product_4-button opacity-0'><span className='relative z-10'>Add to cart</span></button>
           </div>
         </div>
       </div>
