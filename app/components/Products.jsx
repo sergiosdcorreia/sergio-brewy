@@ -405,7 +405,6 @@ export default function Products() {
         trigger: '.prod-container',
         start: 'top -30%',
         toggleActions: 'play reverse play reverse',
-        markers: true,
       },
       y: 0,
       delay: 3,
@@ -418,13 +417,16 @@ export default function Products() {
         trigger: '.prod-container',
         start: 'top -30%',
         toggleActions: 'play reverse play reverse',
-        markers: true,
       },
       opacity: 1,
       delay: 3.2,
       duration: .5,
       ease: 'power1.out',
     })
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
 
   }, [])
 
