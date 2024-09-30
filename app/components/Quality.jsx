@@ -22,8 +22,19 @@ export default function Quality() {
 
     const coffeeCup = coffeeCupRef.current
 
+    mediaQueries.add('(max-width: 1023px)', () => {
+      gsap.to('.quality', {
+        scrollTrigger: {
+          trigger: qualityContainer,
+          start: 'top center',
+        },
+        y: 0,
+        stagger: .5,
+        duration: 1,
+        ease: 'power4.out',
+      })
+    });
     mediaQueries.add('(min-width: 1024px)', () => {
-      
       qualityLeft.forEach((quality) => {
         gsap.to(quality, {
           scrollTrigger: {
@@ -83,8 +94,8 @@ export default function Quality() {
     <section ref={containerRef} id='quality' className='quality_main lg:flex p-20 md:p-28 min-h-[100vh] bg-white pt-[200px] lg:pt-[300px]'>
       <div className='flex flex-col gap-12 lg:flex-row lg:gap-20 lg:items-center'>
         <div className='flex flex-col gap-12 flex-1'>
-          <div className='relative w-full h-[10vh] lg:h-[18vh]'>
-            <div ref={(el) => setQualityLeftRef(el, 0)} className='quality-left quality-left-1 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center'>
+          <div className='product_animation-container relative w-full h-[10vh] lg:h-[18vh]'>
+            <div ref={(el) => setQualityLeftRef(el, 0)} className='quality quality-left quality-left-1 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center relative translate-y-[-100%] lg:translate-y-0 will-change-transform'>
               <Image src='/quality_01.png' alt='quality_image' width={263} height={225} className='max-w-[263px] w-20 lg:w-28' />
               <div>
                 <h4>Pure Grades</h4>
@@ -92,8 +103,8 @@ export default function Quality() {
               </div>
             </div>
           </div>
-          <div className='relative w-full h-[10vh] lg:h-[18vh]'>
-            <div ref={(el) => setQualityLeftRef(el, 1)} className='quality-left quality-left-2 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center'>
+          <div className='product_animation-container relative w-full h-[10vh] lg:h-[18vh]'>
+            <div ref={(el) => setQualityLeftRef(el, 1)} className='quality quality-left quality-left-2 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center relative translate-y-[-100%] lg:translate-y-0 will-change-transform'>
               <Image src='/quality_02.png' alt='quality_image' width={263} height={225} className='max-w-[263px] w-20 lg:w-28' />
               <div>
                 <h4>Wide Assortment</h4>
@@ -101,8 +112,8 @@ export default function Quality() {
               </div>
             </div>
           </div>
-          <div className='relative w-full h-[10vh] lg:h-[18vh]'>
-            <div ref={(el) => setQualityLeftRef(el, 2)} className='quality-left quality-left-3 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center'>
+          <div className='product_animation-container relative w-full h-[10vh] lg:h-[18vh]'>
+            <div ref={(el) => setQualityLeftRef(el, 2)} className='quality quality-left quality-left-3 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center relative translate-y-[-100%] lg:translate-y-0 will-change-transform'>
               <Image src='/quality_03.png' alt='quality_image' width={263} height={225} className='max-w-[263px] w-20 lg:w-28' />
               <div>
                 <h4>Proper Roasting</h4>
@@ -115,8 +126,8 @@ export default function Quality() {
           <Image src='/cup.png' alt='quality' width={5000} height={5000} className='object-contain' />
         </div>
         <div className='flex flex-col gap-12 flex-1'>
-          <div className='relative w-full h-[10vh] lg:h-[18vh]'>
-            <div ref={(el) => setQualityRightRef(el, 0)} className='quality-right quality-right-1 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center'>
+          <div className='product_animation-container relative w-full h-[10vh] lg:h-[18vh]'>
+            <div ref={(el) => setQualityRightRef(el, 0)} className='quality quality-right quality-right-1 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center relative translate-y-[-100%] lg:translate-y-0 will-change-transform'>
               <Image src='/quality_04.png' alt='quality_image' width={263} height={225} className='max-w-[263px] w-20 lg:w-28' />
               <div>
                 <h4>High Quality</h4>
@@ -124,8 +135,8 @@ export default function Quality() {
               </div>
             </div>
           </div>
-          <div className='relative w-full h-[10vh] lg:h-[18vh]'>
-            <div ref={(el) => setQualityRightRef(el, 1)} className='quality-right quality-right-2 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center'>
+          <div className='product_animation-container relative w-full h-[10vh] lg:h-[18vh]'>
+            <div ref={(el) => setQualityRightRef(el, 1)} className='quality quality-right quality-right-2 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center relative translate-y-[-100%] lg:translate-y-0 will-change-transform'>
               <div className='w-20 lg:w-28'>
                 <Image src='/quality_05.png' alt='quality_image' width={263} height={225} className='max-w-[263px] w-20 lg:w-28' />
               </div>
@@ -135,8 +146,8 @@ export default function Quality() {
               </div>
             </div>
           </div>
-          <div className='relative w-full h-[10vh] lg:h-[18vh]'>
-            <div ref={(el) => setQualityRightRef(el, 2)} className='quality-right quality-right-3 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center'>
+          <div className='product_animation-container relative w-full h-[10vh] lg:h-[18vh]'>
+            <div ref={(el) => setQualityRightRef(el, 2)} className='quality quality-right quality-right-3 flex items-start gap-5 lg:flex-col lg:items-center lg:text-center relative translate-y-[-100%] lg:translate-y-0 will-change-transform'>
               <Image src='/quality_06.png' alt='quality_image' width={263} height={225} className='max-w-[263px] w-20 lg:w-28' />
               <div>
                 <h4>Awesome Aroma</h4>
