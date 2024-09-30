@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import Image from "next/image"
 import gsap from 'gsap'
 import { RiCloseLargeLine, RiFacebookFill, RiInstagramLine, RiMenu4Line, RiSearchLine, RiShoppingBagFill, RiTwitterXLine, RiUserFill, RiYoutubeFill } from "react-icons/ri"
 import ScrollLink from './ScrollLink';
+import CustomEase from "gsap/CustomEase";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +15,20 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(CustomEase);
+    CustomEase.create(
+      "hop",
+      "M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1"
+    );
+  }, []);
+
   useEffect(() => {
     gsap.to('#sticky-menu', {
       top: 0,
-      duration: 1,
+      duration: 1.5,
       delay: 1.5,
-      ease: 'power1.out',
+      ease: 'hop',
     })
 
     const pageSectionsLinks = ['home', 'about', 'fragrance', 'quality', 'products']
