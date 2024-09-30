@@ -16,7 +16,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 35%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       duration: .6,
@@ -27,7 +26,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 35%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: .2,
@@ -39,7 +37,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 35%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: .3,
@@ -51,7 +48,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: 1,
@@ -63,7 +59,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1,
@@ -75,7 +70,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.2,
@@ -87,7 +81,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.4,
@@ -99,7 +92,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.6,
@@ -111,7 +103,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.8,
@@ -123,7 +114,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2,
@@ -135,7 +125,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2.2,
@@ -147,7 +136,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2.8,
@@ -159,7 +147,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top 15%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 3.2,
@@ -171,7 +158,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -20%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       duration: 1,
@@ -182,7 +168,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -20%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: .6,
@@ -194,7 +179,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -20%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: 1.2,
@@ -206,7 +190,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -20%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: 1.8,
@@ -218,7 +201,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: .2,
@@ -230,7 +212,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: .4,
@@ -242,7 +223,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: .6,
@@ -254,7 +234,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: .8,
@@ -266,7 +245,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1,
@@ -278,7 +256,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.2,
@@ -290,7 +267,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.4,
@@ -302,7 +278,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: 1.6,
@@ -314,7 +289,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 1.8,
@@ -326,7 +300,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2,
@@ -338,7 +311,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2.2,
@@ -350,7 +322,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: 2.4,
@@ -362,7 +333,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2.6,
@@ -374,7 +344,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 2.8,
@@ -386,7 +355,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       delay: 3,
@@ -398,7 +366,6 @@ export default function Products() {
       scrollTrigger: {
         trigger: '.prod-container',
         start: 'top -30%',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       delay: 3.2,
@@ -490,10 +457,10 @@ export default function Products() {
           </div>
         </div>
       </div>
-      <div className='md:py-28'>
+      <div className='py-20 md:py-28'>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4'>
           <div className='flex flex-col items-center gap-3'>
-            <Image src='/product_02.png' alt='product_image' width={321} height={507} className='product_image-1 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <Image src='/product_02.png' alt='product_image' width={321} height={507} className='product_image-1 opacity-0 max-w-[321px] p-5 md:p-0 hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
             <div className='product_animation-container'>
               <div className='stars-1 text-yellow-500 relative translate-y-[100%]'>
                 <RiStarFill className='inline-block' />
@@ -517,7 +484,7 @@ export default function Products() {
             <button className='product_1-button opacity-0 btn_primary'><span className='relative z-10'>Add to cart</span></button>
           </div>
           <div className='flex flex-col items-center gap-3'>
-            <Image src='/product_03.png' alt='product_image' width={321} height={507} className='product_image-2 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <Image src='/product_03.png' alt='product_image' width={321} height={507} className='product_image-2 opacity-0 max-w-[321px] p-5 md:p-0 hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
             <div className='product_animation-container'>
               <div className='stars-2 text-yellow-500 relative translate-y-[100%]'>
                 <RiStarFill className='inline-block' />
@@ -541,7 +508,7 @@ export default function Products() {
             <button className='btn_primary product_2-button opacity-0'><span className='relative z-10'>Add to cart</span></button>
           </div>
           <div className='flex flex-col items-center gap-3'>
-            <Image src='/product_04.png' alt='product_image' width={321} height={507} className='product_image-3 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <Image src='/product_04.png' alt='product_image' width={321} height={507} className='product_image-3 opacity-0 max-w-[321px] p-5 md:p-0 hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
             <div className='product_animation-container'>
               <div className='stars-3 text-yellow-500 relative translate-y-[100%]'>
                 <RiStarFill className='inline-block' />
@@ -565,7 +532,7 @@ export default function Products() {
             <button className='btn_primary product_3-button opacity-0'><span className='relative z-10'>Add to cart</span></button>
           </div>
           <div className='flex flex-col items-center gap-3'>
-            <Image src='/product_05.png' alt='product_image' width={321} height={507} className='product_image-4 opacity-0 max-w-[321px] hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
+            <Image src='/product_05.png' alt='product_image' width={321} height={507} className='product_image-4 opacity-0 max-w-[321px] p-5 md:p-0 hover:scale-110 hover:-rotate-6 duration-300 cursor-pointer md:w-[80%]' />
             <div className='product_animation-container'>
               <div className='stars-4 text-yellow-500 relative translate-y-[100%]'>
                 <RiStarFill className='inline-block' />

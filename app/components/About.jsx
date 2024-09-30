@@ -15,7 +15,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       duration: .5,
@@ -26,7 +25,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       duration: .5,
@@ -38,7 +36,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       duration: .5,
@@ -50,7 +47,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       duration: 1.5,
@@ -62,7 +58,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       rotation: 360,
       scale: 1,
@@ -75,7 +70,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       duration: 1,
@@ -87,7 +81,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       y: 0,
       duration: 1,
@@ -99,7 +92,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       duration: .5,
@@ -111,7 +103,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top center',
-        toggleActions: 'play reverse play reverse',
       },
       opacity: 1,
       duration: .5,
