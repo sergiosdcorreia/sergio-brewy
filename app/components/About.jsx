@@ -125,8 +125,8 @@ export default function About() {
   }, [])
 
   return (
-    <section id='about' className='about min-h-[100vh] bg-white bg-cover lg:flex'>
-      <div className='flex flex-col justify-center h-100 p-10 lg:gap-20 xl:p-28 lg:w-1/2'>
+    <section id='about' className='about min-h-[100vh] bg-white bg-cover lg:flex pt-40 xl:pt-64'>
+      <div className='flex flex-col justify-center h-100 p-10 gap-10 lg:p-20 xl:p-28 lg:w-1/2'>
         <div className='flex flex-col gap-2'>
           <div className='product_animation-container'>
             <h2 className='about_title-1 relative translate-y-[100%] py-3 text-green-700'>Caturra & Maragogipe</h2>
@@ -153,14 +153,14 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className='flex gap-20'>
+        <div className='flex flex-col sm:flex-row gap-5 sm:gap-20'>
           <button className='about_button-1 btn_primary opacity-0'><span className='relative z-10'>Read More</span></button>
           <button className='about_button-2 btn_secondary opacity-0'><span className='relative z-10'>Read More</span></button>
         </div>
       </div>
       <div className='relative p-10 lg:gap-20 xl:p-28 lg:w-1/2'>
         <Image className='about_image opacity-0 object-contain' src='/about_image.png' alt="about_image" width={1000} height={866} />
-        <div className='absolute about_since scale-0 top-[30%] left-[15%] lg:left-[10%] bg-white h-40 w-40 lg:h-44 lg:w-44 rounded-full grid place-content-center text-center border-2 border-green-900'>
+        <div className='absolute about_since scale-0 top-[15%] lg:top-[30%] left-[15%] lg:left-[10%] bg-white h-40 w-40 lg:h-44 lg:w-44 rounded-full grid place-content-center text-center border-2 border-green-900'>
           <div>
             <h3>since</h3>
             <h2 className='text-green-700'>1955</h2>
