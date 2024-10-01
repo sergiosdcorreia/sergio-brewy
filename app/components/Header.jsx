@@ -9,7 +9,12 @@ import CustomEase from "gsap/CustomEase";
 
 export default function Header() {
   const [isAnimating, setIsAnimating] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia("(min-width: 1024px)").matches;
+    }
+    return false;
+  });
   const [activeSection, setActiveSection] = useState('home')
   
   const menuRef = useRef(null)
@@ -35,8 +40,8 @@ export default function Header() {
       return;
     }
 
-    const menu = menuRef.current;
-    const links = menu.querySelectorAll(".link");
+    const menu = menuRef.current
+    const links = menu.querySelectorAll(".link")
 
     setIsAnimating(true);
 
@@ -90,6 +95,16 @@ export default function Header() {
 
     animateMenu(isMenuOpen)
 
+    const handleResize = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+          setIsMenuOpen(true);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
     const pageSectionsLinks = ['home', 'about', 'fragrance', 'quality', 'products']
     let sectionElements = []
 
@@ -114,6 +129,7 @@ export default function Header() {
       sectionElements.forEach((section) => {
         observer.unobserve(section);
       });
+      window.removeEventListener("resize", handleResize)
     }
 
   }, [isMenuOpen, animateMenu])
@@ -180,29 +196,29 @@ export default function Header() {
                 </div>
                 <ul className="flex flex-col items-start gap-5 lg:flex-row lg:mt-8">
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
+                    <span className="link relative -translate-y-full will-change-transform lg:translate-y-0">
                       <ScrollLink id="home" active={activeSection === 'home' ? true : false }>Home</ScrollLink>
-                    </div>
+                    </span>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
+                    <span className="link relative -translate-y-full will-change-transform">
                       <ScrollLink id="about" active={activeSection === 'about' ? true : false }>About</ScrollLink>
-                    </div>
+                    </span>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
-                      <ScrollLink id="fragrance" className="link relative -translate-y-full will-change-transform" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
-                    </div>
+                    <span className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="fragrance" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
+                    </span>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
-                      <ScrollLink id="quality" className="link relative -translate-y-full will-change-transform" active={activeSection === 'quality' ? true : false }>Quality</ScrollLink>
-                    </div>
+                    <span className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="quality" active={activeSection === 'quality' ? true : false }>Quality</ScrollLink>
+                    </span>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
-                      <ScrollLink id="products" className="link relative -translate-y-full will-change-transform" active={activeSection === 'products' ? true : false }>Products</ScrollLink>
-                    </div>
+                    <span className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="products" active={activeSection === 'products' ? true : false }>Products</ScrollLink>
+                    </span>
                   </li>
                 </ul>
                 <div className="flex items-center my-10 lg:hidden product_animation-container">
