@@ -36,6 +36,7 @@ export default function Header() {
     }
 
     const menu = menuRef.current;
+    const links = menu.querySelectorAll(".link");
 
     setIsAnimating(true);
 
@@ -51,6 +52,14 @@ export default function Header() {
           setIsAnimating(false);
         },
       });
+
+      gsap.to(links, {
+        y: 0,
+        stagger: .1,
+        delay: .75,
+        duration: 1.5,
+        ease: 'power4.out',
+      })
     } else {
       gsap.to(menu, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
@@ -62,6 +71,8 @@ export default function Header() {
           gsap.set(menu, {
             clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
           });
+
+          gsap.set(links, { y: '100%' });
 
           setIsAnimating(false);
         },
@@ -161,32 +172,42 @@ export default function Header() {
                   </ul>
               </div>
               <div ref={menuRef} id="nav-menu" className={`absolute top-0 ${isMenuOpen ? 'right-[0]' : 'right-[-100%]'} min-h-[70vh] w-full px-5 md:px-10 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto z-50`}>
-                <div className="flex items-center justify-between h-24 lg:hidden">
-                  <Image className="w-[80px] h-[80px] mt-5" src="/logo_2.png" alt="logo_2" width={205} height={205} />
-                  <button id="closeicon" className="text-3xl cursor-pointer" onClick={toggleMenu}>
+                <div className="flex items-center justify-between h-24 lg:hidden product_animation-container">
+                  <Image className="link relative -translate-y-full will-change-transform w-[80px] h-[80px] mt-5" src="/logo_2.png" alt="logo_2" width={205} height={205} />
+                  <button id="closeicon" className="link relative -translate-y-full will-change-transform text-3xl cursor-pointer" onClick={toggleMenu}>
                     <RiCloseLargeLine />
                   </button>
                 </div>
                 <ul className="flex flex-col items-start gap-5 lg:flex-row lg:mt-8">
-                  <li onClick={toggleMenu}>
-                    <ScrollLink id="home" active={activeSection === 'home' ? true : false }>Home</ScrollLink>
+                  <li onClick={toggleMenu} className='product_animation-container'>
+                    <div className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="home" active={activeSection === 'home' ? true : false }>Home</ScrollLink>
+                    </div>
                   </li>
-                  <li onClick={toggleMenu}>
-                    <ScrollLink id="about" active={activeSection === 'about' ? true : false }>About</ScrollLink>
+                  <li onClick={toggleMenu} className='product_animation-container'>
+                    <div className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="about" active={activeSection === 'about' ? true : false }>About</ScrollLink>
+                    </div>
                   </li>
-                  <li onClick={toggleMenu}>
-                    <ScrollLink id="fragrance" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
+                  <li onClick={toggleMenu} className='product_animation-container'>
+                    <div className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="fragrance" className="link relative -translate-y-full will-change-transform" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
+                    </div>
                   </li>
-                  <li onClick={toggleMenu}>
-                    <ScrollLink id="quality" active={activeSection === 'quality' ? true : false }>Quality</ScrollLink>
+                  <li onClick={toggleMenu} className='product_animation-container'>
+                    <div className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="quality" className="link relative -translate-y-full will-change-transform" active={activeSection === 'quality' ? true : false }>Quality</ScrollLink>
+                    </div>
                   </li>
-                  <li onClick={toggleMenu}>
-                    <ScrollLink id="products" active={activeSection === 'products' ? true : false }>Products</ScrollLink>
+                  <li onClick={toggleMenu} className='product_animation-container'>
+                    <div className="link relative -translate-y-full will-change-transform">
+                      <ScrollLink id="products" className="link relative -translate-y-full will-change-transform" active={activeSection === 'products' ? true : false }>Products</ScrollLink>
+                    </div>
                   </li>
                 </ul>
-                <div className="flex items-center py-10 lg:hidden">
-                  <p className="font-bold">Follow us <span className="ml-3 mr-5">-</span></p>
-                  <ul className="nav__icons flex space-x-4">
+                <div className="flex items-center my-10 lg:hidden product_animation-container">
+                  <p className="link relative -translate-y-full will-change-transform font-bold">Follow us <span className="ml-3 mr-5">-</span></p>
+                  <ul className="link relative -translate-y-full will-change-transform nav__icons flex space-x-4">
                     <li className="border-2 border-black lg:border-green-900 h-8 w-8 rounded-full grid place-items-center">
                       <a href="#" className='text-black lg:text-green-700'>
                         <RiTwitterXLine />
