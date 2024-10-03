@@ -81,7 +81,7 @@ export default function CardsSection() {
               const animationProgress = (progress - startOffset) / (1 / 3)
               const frontRotation = -180 * animationProgress
               const backRotation = 180 - 180 * animationProgress
-              const cardRotation = rotations[index] * (1 - animationProgress)
+              const cardRotation = mdRotations[index] * (1 - animationProgress)
   
               gsap.to(frontEl, { rotateY: frontRotation, ease: 'power1.out' })
               gsap.to(backEl, { rotateY: backRotation, ease: 'power1.out' })
