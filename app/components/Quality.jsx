@@ -91,7 +91,7 @@ export default function Quality() {
   }
 
   return (
-    <section ref={containerRef} id='quality' className='quality_main lg:flex p-20 md:p-28 min-h-[100vh] bg-white pt-[200px] lg:pt-[300px]'>
+    <section ref={containerRef} id='quality' className='quality_main relative lg:flex p-20 md:p-28 min-h-[100vh] bg-white pt-[200px] lg:pt-[300px]'>
       <div className='flex flex-col gap-12 lg:flex-row lg:gap-20 lg:items-center'>
         <div className='flex flex-col gap-12 flex-1'>
           <div className='product_animation-container relative w-full min-h-[10vh] lg:min-h-[20vh]'>
