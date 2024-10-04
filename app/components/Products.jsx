@@ -380,7 +380,7 @@ export default function Products() {
   }, [])
 
   return (
-    <section id='products' className='prod-container p-5 md:p-20 lg:p-28 min-h-[100vh] bg-white flex flex-col justify-center pt-32 lg:pt-[300px]'>
+    <section id='products' className='prod-container p-5 md:p-20 lg:p-28 min-h-[100vh] bg-white flex flex-col justify-center pt-32 md:pt-36 lg:pt-[300px]'>
       <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
         <div className='product_animation-container'>
           <h4 className='product_subtitle relative translate-y-[100%] text-green-700'>Online Store</h4>
