@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Card = forwardRef(({ id, frontSrc, frontAlt, frontText, backText }, ref ) => {
   return (
-    <div className='card' id={id} ref={ref}>
+    <div className={`${id} card mx-auto mb-40 md:mx-0 md:mb-0`} id={id} ref={ref}>
       <div className='card-wrapper'>
         <div className='flip-card-inner'>
           <div className='flip-card-front'>

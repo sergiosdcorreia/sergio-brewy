@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger)
 export default function CardsSection() {
   const containerRef = useRef(null)
   const cardRefs = useRef([])
-  const textRef = useRef(null);
 
   useGSAP(() => {
     const mediaQueries = gsap.matchMedia()
@@ -23,7 +22,50 @@ export default function CardsSection() {
     const mdPositionsY = [35, 35, 75, 75]
     const mdRotations = [-7.5, 7.5, -7.5, 7.5]
 
-    mediaQueries.add('(max-width: 1023px)', () => {
+    mediaQueries.add('(max-width: 767px)', () => {
+
+      cards.forEach((card) => {
+        const frontEl = card.querySelector('.flip-card-front')
+        const backEl = card.querySelector('.flip-card-back')
+        const frontRotation = -180
+        const backRotation = 180 - 180
+  
+        gsap.to(frontEl, {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 40%',
+            toggleActions: 'play pause resume reverse',
+          },
+          rotateY: frontRotation,
+          duration: 1,
+          ease: 'power1.out'
+        })
+        gsap.to(backEl, {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 40%',
+            toggleActions: 'play pause resume reverse',
+          },
+          rotateY: backRotation,
+          duration: 1,
+          ease: 'power1.out'
+        })
+      })
+
+      gsap.to('.cards_text', {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top center',
+          toggleActions: 'play reverse play reverse',
+        }
+      });
+    })
+
+    mediaQueries.add('(min-width: 768px) and (max-width: 1023px)', () => {
       ScrollTrigger.create({
         trigger: containerRef.current.querySelector('.cards'),
         start: 'top top',
@@ -48,7 +90,7 @@ export default function CardsSection() {
         })
       })
 
-      gsap.to(textRef.current, {
+      gsap.to('.cards_text', {
         y: 0,
         opacity: 1,
         duration: 0.5,
@@ -122,7 +164,7 @@ export default function CardsSection() {
         })
       })
   
-      gsap.to(textRef.current, {
+      gsap.to('.cards_text', {
         y: 0,
         opacity: 1,
         duration: 0.5,
@@ -180,8 +222,10 @@ export default function CardsSection() {
   return (
     <>
       <div ref={containerRef} className='container-cards'>
-        <section id='fragrance' className='cards bg-[url("/hero_bg.jpg")] bg-cover'>
-          <h3 ref={textRef} className='cards_text text-white w-[70%] text-center absolute top-[26%] left-[50%] -translate-x-1/2 -translate-y-10 opacity-0'>Experience the vibrant taste of Organic Colombian Coffee, crafted to perfection with a smooth finish and rich aroma. Its balanced notes offer a satisfying blend of flavor and freshness, making every cup truly exceptional.</h3>
+        <section id='fragrance' className='cards bg-[url("/hero_bg.jpg")] bg-cover py-20 md:py-0'>
+          <div className='product_animation-container mb-20 md:mb-0'>
+            <h3 className='cards_text text-white w-full p-5 md:p-0 md:w-[70%] text-center md:relative md:pt-64 lg:pt-80 md:top-[26%] md:left-[50%] md:-translate-x-1/2 -translate-y-[100%] opacity-0'>Experience the vibrant taste of Organic Colombian Coffee, crafted to perfection with a smooth finish and rich aroma. Its balanced notes offer a satisfying blend of flavor and freshness, making every cup truly exceptional.</h3>
+          </div>
           {['Arabica Green', 'Arabica Roasted', 'Robusta Roasted', 'Mixed Sorts'].map((frontText, index) => {
             return (
               <Card
