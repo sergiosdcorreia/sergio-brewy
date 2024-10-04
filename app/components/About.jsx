@@ -116,7 +116,7 @@ export default function About() {
   }, [])
 
   return (
-    <section id='about' className='about min-h-[100vh] bg-white bg-cover lg:flex pt-20 lg:pt-40 xl:pt-64'>
+    <section id='about' className='about min-h-[100vh] bg-white bg-cover lg:flex pt-20 lg:pt-24'>
       <div className='flex flex-col justify-center h-100 p-5 gap-10 md:p-20 lg:p-28 lg:w-1/2'>
         <div className='flex flex-col gap-2'>
           <div className='product_animation-container'>

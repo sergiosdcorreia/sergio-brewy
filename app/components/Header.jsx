@@ -21,6 +21,9 @@ export default function Header() {
   const mediaQueries = gsap.matchMedia()
 
   const toggleMenu = useCallback(() => {
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      return
+    }
     if (!isAnimating) {
       setIsMenuOpen((prevIsOpen) => {
         return !prevIsOpen;
