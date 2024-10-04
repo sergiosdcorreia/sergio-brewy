@@ -92,8 +92,7 @@ export default function Header() {
   useEffect(() => {
     gsap.to('#sticky-menu', {
       top: 0,
-      duration: 5.5,
-      delay: .8,
+      duration: 5,
       ease: 'hop',
     })
 
