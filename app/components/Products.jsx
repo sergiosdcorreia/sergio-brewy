@@ -413,7 +413,7 @@ export default function Products() {
               <h3 className='ethiopia-arabica relative translate-y-[100%]'>Ethiopia Arabica</h3>
             </div>
             <div className='product_animation-container'>
-              <p className='discover-the-origins relative translate-y-[100%]'>Discover the origins of our Organic Colombian Coffee, crafted with care and dedication to perfection. Each sip reveals the true essence of quality, bringing you an exceptional coffee experience.</p>
+              <p className='discover-the-origins relative translate-y-[100%] lg:max-w-96'>Discover the origins of our Organic Colombian Coffee, crafted with care and dedication to perfection. Each sip reveals the true essence of quality, bringing you an exceptional coffee experience.</p>
             </div>
           </div>
 
