@@ -116,8 +116,8 @@ export default function About() {
   }, [])
 
   return (
-    <section id='about' className='about min-h-[100vh] bg-white bg-cover lg:flex pt-40 xl:pt-64'>
-      <div className='flex flex-col justify-center h-100 p-10 gap-10 lg:p-20 xl:p-28 lg:w-1/2'>
+    <section id='about' className='about min-h-[100vh] bg-white bg-cover lg:flex pt-20 lg:pt-40 xl:pt-64'>
+      <div className='flex flex-col justify-center h-100 p-5 gap-10 lg:p-20 xl:p-28 lg:w-1/2'>
         <div className='flex flex-col gap-2'>
           <div className='product_animation-container'>
             <h2 className='about_title-1 relative translate-y-[100%] py-3 text-green-700'>Caturra & Maragogipe</h2>

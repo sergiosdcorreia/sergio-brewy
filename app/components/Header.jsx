@@ -138,7 +138,7 @@ export default function Header() {
     <>
       <header id="navbar" className='w-100 text-black lg:text-white'>
         <nav className="max-w-[1920px">
-          <div id="sticky-menu" className="fixed w-full top-[-250px] left-0 z-50 bg-black/70 pb-10">
+          <div id="sticky-menu" className="fixed w-full top-[-250px] left-0 z-50 bg-black/70 lg:pb-10">
             <div className="flex items-center justify-between h-24 px-5 md:px-10 lg:mx-auto lg:h-auto lg:flex-col">
               <div className="flex-1 lg:hidden"></div>
               <div className="flex-1 grid place-items-center lg:place-items-start lg:flex-initial lg:w-full lg:grid-cols-3">
