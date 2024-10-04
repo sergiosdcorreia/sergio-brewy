@@ -18,6 +18,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState('home')
   
   const menuRef = useRef(null)
+  const mediaQueries = gsap.matchMedia()
 
   const toggleMenu = useCallback(() => {
     if (!isAnimating) {
@@ -93,6 +94,58 @@ export default function Header() {
       ease: 'hop',
     })
 
+    mediaQueries.add('(min-width: 1024px)', () => {
+      const logoMove = -(window.innerWidth / 2) + 90
+
+      gsap.to('.follow_us', {
+        scrollTrigger: {
+          trigger: '.hero-cards',
+          start: 'top top',
+          toggleActions: 'play pause resume reverse',
+        },
+        opacity: 0,
+        duration: 1,
+        delay: 1,
+        ease: 'power1.out'
+      })
+
+      gsap.to('.brewy_logo', {
+        scrollTrigger: {
+          trigger: '.hero-cards',
+          start: 'top top',
+          toggleActions: 'play pause resume reverse',
+        },
+        x: logoMove,
+        duration: 1,
+        delay: 1,
+        ease: 'power1.out'
+      })
+
+      gsap.to('.menu_links', {
+        scrollTrigger: {
+          trigger: '.hero-cards',
+          start: 'top top',
+          toggleActions: 'play pause resume reverse',
+        },
+        y: -100,
+        duration: 1,
+        delay: 1,
+        ease: 'power1.out'
+      })
+
+      gsap.to('.sticky_menu', {
+        scrollTrigger: {
+          trigger: '.hero-cards',
+          start: 'top top',
+          toggleActions: 'play pause resume reverse',
+        },
+        height: 110,
+        duration: 1,
+        delay: 1,
+        ease: 'power1.out'
+      })
+    })
+
     animateMenu(isMenuOpen)
 
     const handleResize = () => {
@@ -138,11 +191,11 @@ export default function Header() {
     <>
       <header id="navbar" className='w-100 text-black lg:text-white'>
         <nav className="max-w-[1920px">
-          <div id="sticky-menu" className="fixed w-full top-[-250px] left-0 z-50 bg-black/70 lg:pb-10">
+          <div id="sticky-menu" className="sticky_menu fixed w-full top-[-250px] left-0 z-50 bg-black/70 lg:pb-10">
             <div className="flex items-center justify-between h-24 px-5 md:px-10 lg:mx-auto lg:h-auto lg:flex-col">
               <div className="flex-1 lg:hidden"></div>
               <div className="flex-1 grid place-items-center lg:place-items-start lg:flex-initial lg:w-full lg:grid-cols-3">
-                <div className="hidden lg:flex items-center py-10 place-self-start">
+                <div className="follow_us hidden lg:flex items-center py-10 place-self-start">
                   <p className="font-bold">Follow us <span className="ml-3 mr-5">-</span></p>
                   <ul className="nav__icons flex space-x-4">
                     <li className="border-2 border-black lg:border-green-900 h-8 w-8 rounded-full grid place-items-center">
@@ -167,7 +220,7 @@ export default function Header() {
                     </li>
                   </ul>
                 </div>
-                <Image className="w-20 place-self-center lg:w-[80px] lg:h-[80px]" src="/logo.png" alt="logo" width={205} height={205} />
+                <Image className="brewy_logo w-20 place-self-center lg:w-[80px] lg:h-[80px]" src="/logo.png" alt="logo" width={205} height={205} />
                 <ul className="nav__icons hidden lg:flex space-x-8 place-self-end self-center">
                     <li className="border-2 border-black lg:border-green-900 h-8 w-8 rounded-full grid place-items-center">
                       <a href="#" className='text-white lg:text-green-700'>
@@ -187,7 +240,7 @@ export default function Header() {
                     </li>
                   </ul>
               </div>
-              <div ref={menuRef} id="nav-menu" className={`absolute top-0 ${isMenuOpen ? 'right-[0]' : 'right-[-100%]'} min-h-[70vh] w-full px-5 md:px-10 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto z-50`}>
+              <div ref={menuRef} id="nav-menu" className={`menu_links absolute top-0 ${isMenuOpen ? 'right-[0]' : 'right-[-100%]'} min-h-[70vh] w-full px-5 md:px-10 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto z-50`}>
                 <div className="flex items-center justify-between h-24 lg:hidden product_animation-container">
                   <Image className="link relative -translate-y-full will-change-transform w-[80px] h-[80px] mt-5" src="/logo_2.png" alt="logo_2" width={205} height={205} />
                   <button id="closeicon" className="link relative -translate-y-full will-change-transform text-3xl cursor-pointer" onClick={toggleMenu}>
