@@ -195,7 +195,7 @@ export default function Header() {
       window.removeEventListener("resize", handleResize)
     }
 
-  }, [isMenuOpen, animateMenu])
+  }, [isMenuOpen, animateMenu, mediaQueries])
 
   return (
     <>
@@ -251,7 +251,7 @@ export default function Header() {
                   </ul>
               </div>
               <div ref={menuRef} id="nav-menu" className={`menu_links absolute top-0 ${isMenuOpen ? 'right-[0]' : 'right-[-100%]'} min-h-[70vh] w-full px-5 md:px-10 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto z-50`}>
-                <div className="flex items-center justify-between h-24 lg:hidden product_animation-container">
+                <div className="flex items-center justify-between h-28 lg:hidden product_animation-container">
                   <Image className="link relative -translate-y-full will-change-transform w-[80px] h-[80px] mt-5" src="/logo_2.png" alt="logo_2" width={205} height={205} />
                   <button id="closeicon" className="link relative -translate-y-full will-change-transform text-3xl cursor-pointer" onClick={toggleMenu}>
                     <RiCloseLargeLine />
