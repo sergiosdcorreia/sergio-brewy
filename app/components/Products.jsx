@@ -382,8 +382,9 @@ export default function Products() {
   return (
     <section id='products' className='prod-container p-5 md:p-20 lg:p-28 min-h-[100vh] bg-white flex flex-col justify-center pt-32 md:pt-36 lg:pt-56'>
       <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
+        <h2 className='sr-only'>Products</h2>
         <div className='product_animation-container'>
-          <h2 className='product_subtitle relative text-base font-bold sm:text-lg translate-y-[100%] text-green-700'>Online Store</h2>
+          <p className='product_subtitle relative text-base font-bold sm:text-lg translate-y-[100%] text-green-700'>Online Store</p>
         </div>
         <div className='product_animation-container'>
           <h3 className='product_title relative text-3xl font-bold md:text-5xl translate-y-[100%]'>Popular Products</h3>

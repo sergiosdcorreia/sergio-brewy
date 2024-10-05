@@ -150,8 +150,9 @@ export default function About() {
         <Image className='about_image opacity-0 object-contain' src='/about_image.png' alt="about_image" width={1000} height={866} />
         <div className='absolute about_since scale-0 top-[15%] lg:top-[30%] left-[15%] lg:left-[10%] bg-white h-40 w-40 lg:h-44 lg:w-44 rounded-full grid place-content-center text-center border-2 border-green-900'>
           <div>
-            <h3>since</h3>
-            <h2 className='text-green-700'>1955</h2>
+            <p className='text-2xl font-bold'>since<br />
+              <span className='text-green-700 text-3xl font-bold md:text-5xl'>1955</span>
+            </p>
           </div>
         </div>
       </div>

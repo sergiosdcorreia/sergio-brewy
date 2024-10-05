@@ -224,6 +224,7 @@ export default function CardsSection() {
       <div ref={containerRef} className='container-cards'>
         <section id='fragrance' className='cards bg-[url("/hero_bg.jpg")] bg-cover py-20 md:py-0'>
           <div className='product_animation-container mb-20 md:mb-0'>
+            <h2 className='sr-only'>Fragrance</h2>
             <h3 className='cards_text text-white text-xl md:text-2xl w-full p-5 md:p-0 md:w-[70%] text-center md:relative md:pt-40 lg:pt-40 md:top-[26%] md:left-[50%] md:-translate-x-1/2 -translate-y-[100%] opacity-0'>Experience the vibrant taste of Organic Colombian Coffee, crafted to perfection with a smooth finish and rich aroma. Its balanced notes offer a satisfying blend of flavor and freshness, making every cup truly exceptional.</h3>
           </div>
           {['Arabica Green', 'Arabica Roasted', 'Robusta Roasted', 'Mixed Sorts'].map((frontText, index) => {
