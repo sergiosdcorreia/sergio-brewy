@@ -103,6 +103,8 @@ export default function Header() {
         scrollTrigger: {
           trigger: '.hero-cards',
           start: 'top top',
+          end: 'bottom center',
+          scrub: 1,
           toggleActions: 'play pause resume reverse',
         },
         opacity: 0,
@@ -115,6 +117,8 @@ export default function Header() {
         scrollTrigger: {
           trigger: '.hero-cards',
           start: 'top top',
+          end: 'bottom center',
+          scrub: 1,
           toggleActions: 'play pause resume reverse',
         },
         x: logoMove,
@@ -127,6 +131,8 @@ export default function Header() {
         scrollTrigger: {
           trigger: '.hero-cards',
           start: 'top top',
+          end: 'bottom center',
+          scrub: 1,
           toggleActions: 'play pause resume reverse',
         },
         y: -100,
@@ -139,6 +145,8 @@ export default function Header() {
         scrollTrigger: {
           trigger: '.hero-cards',
           start: 'top top',
+          end: 'bottom center',
+          scrub: 1,
           toggleActions: 'play pause resume reverse',
         },
         height: 110,
