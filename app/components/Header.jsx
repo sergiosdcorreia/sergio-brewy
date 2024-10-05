@@ -3,12 +3,9 @@
 import { useState, useEffect, useLayoutEffect, useCallback, useRef } from 'react'
 import Image from "next/image"
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { RiCloseLargeLine, RiFacebookFill, RiInstagramLine, RiMenu4Line, RiSearchLine, RiShoppingBagFill, RiTwitterXLine, RiUserFill, RiYoutubeFill } from "react-icons/ri"
 import ScrollLink from './ScrollLink';
 import CustomEase from "gsap/CustomEase";
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(() => {
@@ -205,7 +202,6 @@ export default function Header() {
         observer.unobserve(section);
       });
       window.removeEventListener("resize", handleResize)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }
 
   }, [isMenuOpen, animateMenu, mediaQueries])
