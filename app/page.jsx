@@ -98,10 +98,10 @@ export default function Home() {
       rows.push(
         <div className='row' key={i}>
           <div className='card-image card-left'>
-            <img src={`/product-${2 * i - 1}.jpg`} alt='' />
+            <Image src={`/product-${2 * i - 1}.jpg`} alt='image_left' width={1024} height={960} />
           </div>
           <div className='card-image card-right'>
-            <img src={`/product-${2 * i}.jpg`} alt='' />
+            <Image src={`/product-${2 * i}.jpg`} alt='image_right' width={1024} height={960} />
           </div>
         </div>
       )
