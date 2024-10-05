@@ -12,14 +12,15 @@ export default function Quality() {
   const qualityLeftRef = useRef([])
   const qualityRightRef = useRef([])
   const coffeeCupRef = useRef(null)
-
+  
   useEffect(() => {
     const mediaQueries = gsap.matchMedia()
-
+    
     const qualityContainer = containerRef.current
     const qualityLeft = qualityLeftRef.current
     const qualityRight = qualityRightRef.current
-
+    const totalScrollHeight = window.innerHeight * 3
+    
     const coffeeCup = coffeeCupRef.current
 
     mediaQueries.add('(max-width: 1023px)', () => {
@@ -35,12 +36,20 @@ export default function Quality() {
       })
     });
     mediaQueries.add('(min-width: 1024px)', () => {
+
+      ScrollTrigger.create({
+        trigger: qualityContainer,
+        start: 'top top',
+        end: () => `+=${totalScrollHeight}`,
+        pin: true,
+        pinSpacing: true,
+      })
       qualityLeft.forEach((quality) => {
         gsap.to(quality, {
           scrollTrigger: {
             trigger: qualityContainer,
-            start: 'top 500',
-            end: 'bottom bottom',
+            start: 'top bottom',
+            end: () => `+=${totalScrollHeight}`,
             scrub: .1,
           },
           left: '0%',
@@ -52,8 +61,8 @@ export default function Quality() {
         gsap.to(quality, {
           scrollTrigger: {
             trigger: qualityContainer,
-            start: 'top 500',
-            end: 'bottom bottom',
+            start: 'top bottom',
+            end: () => `+=${totalScrollHeight}`,
             scrub: .1,
           },
           left: '0%',
@@ -64,13 +73,14 @@ export default function Quality() {
       gsap.to(coffeeCup, {
         scrollTrigger: {
           trigger: qualityContainer,
-          start: 'top 200',
-          end: 'bottom bottom',
+          start: 'top center',
+          end: () => `+=${totalScrollHeight}`,
           scrub: .1,
         },
         scale: 1,
         rotation: 360,
-        ease: 'none',
+        delay: 1,
+        ease: 'power1.out',
       })
     })
     return () => {
