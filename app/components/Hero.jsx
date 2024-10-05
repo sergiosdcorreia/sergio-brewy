@@ -28,10 +28,8 @@ export default function Hero() {
       <div className='bg-[url("/hero_bg.jpg")] bg-cover min-h-[80vh]'>
         <div className='container relative top-64 mx-auto pb-[40%] flex flex-col justify-center items-center gap-3 text-center md:pb-[30%]'>
           <div className='product_animation-container'>
-            <h1 className='hero_title text-green-700 relative translate-y-[-100%] will-change-transform leading-tight'>Organic</h1>
-          </div>
-          <div className='product_animation-container'>
-            <h1 className="hero_title relative translate-y-[-100%] will-change-transform leading-tight">Colombian Coffee</h1>
+            <h1 className='hero_title  relative translate-y-[-100%] will-change-transform leading-tight'><span className='text-green-700'>Organic</span><br />
+            Colombian Coffee</h1>
           </div>
 
           <div className='product_animation-container w-full md:w-[70%] overflow-hidden px-5'>

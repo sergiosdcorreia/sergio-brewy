@@ -120,10 +120,7 @@ export default function About() {
       <div className='flex flex-col justify-center h-100 p-5 gap-10 md:p-20 lg:p-28 lg:w-1/2'>
         <div className='flex flex-col gap-2'>
           <div className='product_animation-container'>
-            <h2 className='about_title-1 relative translate-y-[100%] py-3 text-green-700'>Caturra & Maragogipe</h2>
-          </div>
-          <div className='product_animation-container'>
-            <h2 className='about_title-2 relative translate-y-[100%]'>Boutique Plantation Coffee</h2>
+            <h2 className='about_title-1 relative translate-y-[100%] py-3'><span className='text-green-700'>Caturra & Maragogipe</span> <br />Boutique Plantation Coffee</h2>
           </div>
 
           <div className='product_animation-container'>

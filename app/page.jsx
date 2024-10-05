@@ -119,6 +119,7 @@ export default function Home() {
       <Products />
       <section className='main section-footer-animation pt-[300px] hidden'>
         <div className='main-content z-40'>
+          <h2 className='sr-only'>Newsletter</h2>
           <div className='logo'>
             <Image src='/cup.png' alt='Cup of coffee' width={5000} height={5000} />
           </div>

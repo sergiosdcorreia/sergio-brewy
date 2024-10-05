@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <footer className='bg-[url("/footer_bg.jpg")] bg-cover'>
       <div className='mx-auto p-5 md:p-20 xl:p-28 flex flex-col gap-20 md:py-28 md:max-w-xl xl:flex-row xl:max-w-full xl:justify-center'>
+        <h2 className='sr-only'>Footer</h2>
         <div className='flex flex-col items-center gap-8 text-center lg:flex-1'>
           <Image className="w-24 md:w-28" src="/logo.png" alt="logo" width={205} height={205} />
           <p className='text-white opacity-50 lg:max-w-xs lg:text-start'>Experience the smooth and balanced taste of Organic Colombian Coffee, with a perfect blend of rich flavor and refined notes in every cup.</p>

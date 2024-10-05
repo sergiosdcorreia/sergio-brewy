@@ -383,10 +383,10 @@ export default function Products() {
     <section id='products' className='prod-container p-5 md:p-20 lg:p-28 min-h-[100vh] bg-white flex flex-col justify-center pt-32 md:pt-36 lg:pt-56'>
       <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
         <div className='product_animation-container'>
-          <h4 className='product_subtitle relative translate-y-[100%] text-green-700'>Online Store</h4>
+          <h2 className='product_subtitle relative text-base font-bold sm:text-lg translate-y-[100%] text-green-700'>Online Store</h2>
         </div>
         <div className='product_animation-container'>
-          <h2 className='product_title relative translate-y-[100%]'>Popular Products</h2>
+          <h3 className='product_title relative text-3xl font-bold md:text-5xl translate-y-[100%]'>Popular Products</h3>
         </div>
         <div className='product_animation-container'>
           <p className='py-5 product_intro_text relative translate-y-[100%]'>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and satisfying experience. Aliquam eget sapien sed orci accumsan interdum at ac mi.</p>
@@ -410,7 +410,7 @@ export default function Products() {
             </div>
 
             <div className='product_animation-container'>
-              <h3 className='ethiopia-arabica relative translate-y-[100%]'>Ethiopia Arabica</h3>
+              <h4 className='ethiopia-arabica relative translate-y-[100%]'>Ethiopia Arabica</h4>
             </div>
             <div className='product_animation-container'>
               <p className='discover-the-origins relative translate-y-[100%] lg:max-w-96'>Discover the origins of our Organic Colombian Coffee, crafted with care and dedication to perfection. Each sip reveals the true essence of quality, bringing you an exceptional coffee experience.</p>
