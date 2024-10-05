@@ -268,27 +268,27 @@ export default function Header() {
                 </div>
                 <ul className="flex flex-col items-start gap-5 lg:flex-row lg:mt-8">
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform lg:translate-y-0">
+                    <div className="link relative -translate-y-full lg:translate-y-0 will-change-transform lg:translate-y-0">
                       <ScrollLink id="home" active={activeSection === 'home' ? true : false }>Home</ScrollLink>
                     </div>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
+                    <div className="link relative -translate-y-full lg:translate-y-0 will-change-transform">
                       <ScrollLink id="about" active={activeSection === 'about' ? true : false }>About</ScrollLink>
                     </div>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
+                    <div className="link relative -translate-y-full lg:translate-y-0 will-change-transform">
                       <ScrollLink id="fragrance" active={activeSection === 'fragrance' ? true : false }>Fragrance</ScrollLink>
                     </div>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
+                    <div className="link relative -translate-y-full lg:translate-y-0 will-change-transform">
                       <ScrollLink id="quality" active={activeSection === 'quality' ? true : false }>Quality</ScrollLink>
                     </div>
                   </li>
                   <li onClick={toggleMenu} className='product_animation-container'>
-                    <div className="link relative -translate-y-full will-change-transform">
+                    <div className="link relative -translate-y-full lg:translate-y-0 will-change-transform">
                       <ScrollLink id="products" active={activeSection === 'products' ? true : false }>Products</ScrollLink>
                     </div>
                   </li>
