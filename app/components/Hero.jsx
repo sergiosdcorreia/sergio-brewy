@@ -9,7 +9,6 @@ export default function Hero() {
   useEffect(() => {
     gsap.to('.hero_title', {
       y: 0,
-      delay: .1,
       stagger: .5,
       duration: 1.2,
       ease: 'power1.out',
@@ -35,10 +34,10 @@ export default function Hero() {
             <h1 className="hero_title relative translate-y-[-100%] will-change-transform leading-tight">Colombian Coffee</h1>
           </div>
 
-          <div className='product_animation-container w-full md:w-[70%]'>
+          <div className='product_animation-container w-full md:w-[70%] overflow-hidden px-5'>
             <h4 className='hero_text text-white pt-5 relative translate-y-[-100%] will-change-transform'>Experience the rich essence of Colombia with a coffee crafted to perfection.</h4>
           </div>
-          <div className='product_animation-container max-w-full md:w-[70%]'>
+          <div className='product_animation-container max-w-full md:w-[70%] overflow-hidden px-5'>
             <h4 className='hero_text text-white relative translate-y-[-100%] will-change-transform'>Smooth and bold, each sip delivers a unique blend of flavor and aroma that awakens your senses.</h4>
           </div>
         </div>

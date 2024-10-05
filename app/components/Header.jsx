@@ -3,12 +3,14 @@
 import { useState, useEffect, useLayoutEffect, useCallback, useRef } from 'react'
 import Image from "next/image"
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { RiCloseLargeLine, RiFacebookFill, RiInstagramLine, RiMenu4Line, RiSearchLine, RiShoppingBagFill, RiTwitterXLine, RiUserFill, RiYoutubeFill } from "react-icons/ri"
 import ScrollLink from './ScrollLink';
 import CustomEase from "gsap/CustomEase";
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Header() {
-  const [isAnimating, setIsAnimating] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(() => {
     if (typeof window !== 'undefined') {
       return window.matchMedia("(min-width: 1024px)").matches;
@@ -18,18 +20,18 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState('home')
   
   const menuRef = useRef(null)
+  const isAnimatingRef = useRef(false)
   const mediaQueries = gsap.matchMedia()
 
   const toggleMenu = useCallback(() => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
       return
     }
-    if (!isAnimating) {
-      setIsMenuOpen((prevIsOpen) => {
-        return !prevIsOpen;
-      });
+    if (!isAnimatingRef.current) {
+      isAnimatingRef.current = true
+      setIsMenuOpen((prevIsOpen) => !prevIsOpen);
     }
-  }, [isAnimating]);
+  }, []);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(CustomEase);
@@ -44,56 +46,60 @@ export default function Header() {
       return;
     }
 
-    const menu = menuRef.current
-    const links = menu.querySelectorAll(".link")
+    mediaQueries.add('(max-width: 1023px)', () => {
+      const menu = menuRef.current
+      const links = menu.querySelectorAll(".link")
 
-    setIsAnimating(true);
+      isAnimatingRef.current = true
 
-    if (open) {
-      gsap.to(menu, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        ease: "hop",
-        duration: 1.5,
-        onStart: () => {
-          menu.style.pointerEvents = "all";
-        },
-        onComplete: () => {
-          setIsAnimating(false);
-        },
-      });
+      if (open) {
+        gsap.to(menu, {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          ease: "hop",
+          duration: 1.5,
+          onStart: () => {
+            menu.style.pointerEvents = "all";
+          },
+          onComplete: () => {
+            isAnimatingRef.current = false
+          },
+        });
 
-      gsap.to(links, {
-        y: 0,
-        stagger: .1,
-        delay: .75,
-        duration: 1.5,
-        ease: 'power4.out',
-      })
-    } else {
-      gsap.to(menu, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        ease: "hop",
-        duration: 1.5,
-        delay: 0.25,
-        onComplete: () => {
-          menu.style.pointerEvents = "none";
-          gsap.set(menu, {
-            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-          });
+        gsap.to(links, {
+          y: 0,
+          stagger: .1,
+          delay: 1.25,
+          duration: 1.5,
+          ease: 'power4.out',
+        })
+      } else {
+        gsap.to(menu, {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          ease: "hop",
+          duration: 1.5,
+          delay: .25,
+          onComplete: () => {
+            menu.style.pointerEvents = "none";
+            gsap.set(menu, {
+              clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+            });
 
-          gsap.set(links, { y: '100%' });
+            gsap.set(links, { y: '100%' });
 
-          setIsAnimating(false);
-        },
-      });
-    }
-  }, []);
+            isAnimatingRef.current = false
+          },
+        });
+      }
+    })
+  }, [mediaQueries]);
 
   useEffect(() => {
-    gsap.to('#sticky-menu', {
-      top: 0,
-      duration: 5,
-      ease: 'hop',
+    mediaQueries.add('(max-width: 1023px)', () => {
+      gsap.to('#sticky-menu', {
+        top: 0,
+        duration: 3,
+        ease: 'power4.out',
+      })
     })
 
     mediaQueries.add('(min-width: 1024px)', () => {
@@ -154,6 +160,12 @@ export default function Header() {
         delay: 1,
         ease: 'power1.out'
       })
+
+      gsap.to('#sticky-menu', {
+        top: 0,
+        duration: 3,
+        ease: 'power4.out',
+      })
     })
 
     animateMenu(isMenuOpen)
@@ -193,6 +205,7 @@ export default function Header() {
         observer.unobserve(section);
       });
       window.removeEventListener("resize", handleResize)
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }
 
   }, [isMenuOpen, animateMenu, mediaQueries])
