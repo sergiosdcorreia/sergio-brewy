@@ -14,6 +14,27 @@
   }
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -35,7 +56,9 @@ body {
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -47,26 +70,40 @@ body {
 /*
   5. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /*
   6. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   7. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /*
   8. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -75,7 +112,8 @@ p, h1, h2, h3, h4, h5, h6 {
   @apply text-xl font-bold duration-300;
 }
 
-.nav-link:hover, .active {
+.nav-link:hover,
+.active {
   @apply text-green-700;
 }
 
@@ -115,7 +153,8 @@ h4 {
 
 /* About */
 
-.btn_primary, .btn_secondary {
+.btn_primary,
+.btn_secondary {
   @apply relative flex h-14 w-48 bg-green-800 items-center justify-center text-white uppercase shadow-2xl overflow-hidden transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-white before:duration-500 before:ease-out hover:text-black hover:before:h-60 hover:before:w-60;
 }
 
@@ -159,7 +198,7 @@ img {
   position: relative;
   width: 40%;
   height: 360px;
-  border-radius: .75em;
+  border-radius: 0.75em;
   overflow: hidden;
   will-change: transform;
 }
@@ -187,7 +226,7 @@ img {
 
 .line {
   position: relative;
-  margin: .5em 0;
+  margin: 0.5em 0;
   width: max-content;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -252,15 +291,15 @@ img {
 }
 
 #card-2 .card-wrapper {
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 
 #card-3 .card-wrapper {
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
 #card-4 .card-wrapper {
-  animation-delay: .6s;
+  animation-delay: 0.6s;
 }
 
 .flip-card-inner {
@@ -270,12 +309,13 @@ img {
   transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: .8em;
+  border-radius: 0.8em;
   overflow: hidden;
 }
 
@@ -328,13 +368,14 @@ img {
     height: 100%;
     transform-style: preserve-3d;
   }
-  
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: .8em;
+    border-radius: 0.8em;
     overflow: hidden;
   }
 }
